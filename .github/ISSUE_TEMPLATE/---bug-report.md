@@ -1,7 +1,7 @@
 ---
 name: "🧱 Bug Report"
 about: "Something isn't working well 🚨"
-
+labels: [context-script, scope-stability, status-tracking, type-bug]
 ---
 
 ## 🧱 Bug Report

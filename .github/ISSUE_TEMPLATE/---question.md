@@ -1,6 +1,7 @@
 ---
 name: "🗺 Question"
 about: "There's something unclear ℹ︎"
+labels: [status-tracking, type-question]
 
 ---
 
