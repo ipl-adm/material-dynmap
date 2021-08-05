@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name            Material Dynmap
-// @version         0.1.0
+// @version         0.1.1
 // @description     Material styling for Bukkit's dynmap Minecraft plugin.
 // @author          2021, SNDST00M (https://github.com/SNDST00M/)
 // @license	        MIT
-// @homepage        https://github.com/SNDST00M/material-dynmap/blob/v0.1.0/README.md
-// @icon            https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.0/assets/icon.png
+// @homepage        https://github.com/SNDST00M/material-dynmap/blob/v0.1.1/README.md
+// @icon            https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.1/assets/icon.png
 // @updateURL       https://raw.githubusercontent.com/SNDST00M/material-dynmap/main/src/user.js
 // @downloadURL     https://raw.githubusercontent.com/SNDST00M/material-dynmap/main/src/user.js
 // @match           *://*/*
@@ -426,12 +426,12 @@
 	}
 
 	.dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Flat"] {
-		background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.0/assets/world-type.svg") !important;
+		background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.1/assets/world-type.svg") !important;
 		background-size: cover;
 	}
 
 	.dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Surface"] {
-		background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.0/assets/world-type.svg") !important;
+		background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.1/assets/world-type.svg") !important;
 		background-size: cover;
 		font-size: 5.5px;
 		transform: rotateZ(45.5deg) scale(1.42);
@@ -984,5 +984,5 @@
 	`.replace(/^\t/gm, "");
 	script.id = "material-dynmap-script";
 	document.body.appendChild(script);
-	document.head.querySelector("link[rel='icon']").href = "https://cdn.discordapp.com/attachments/299684112657154048/872125860549894154/icon.ico";
+	document.head.querySelector("link[rel='icon']").href = "https://unpkg.com/material-dynmap@0.1.1/assets/icon.ico";
 }));
