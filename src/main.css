@@ -329,8 +329,15 @@ body {
 	flex-shrink: 0;
 	flex-wrap: nowrap;
 	position: static;
-	transition: initial;
+	transition: width 0.2s ease-in-out;
 	width: 270px;
+}
+
+@media screen and (max-width: 640px) {
+	.dynmap .sidebar {
+		overflow: hidden;
+		width: 0;
+	}
 }
 
 .dynmap .sidebar legend {
