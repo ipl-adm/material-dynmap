@@ -22,7 +22,7 @@
 
 > The Red Keep in King's Landing on the [WesterosCraft Minecraft server][westeroscraft].
 
-<p align="center"><a href="https://openuserjs.org/SNDST00M/Material_Dynmap" target="_blank"><img src="https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.1/assets/westeroscraft-surface.png"/></a></p>
+<p align="center"><a href="https://openuserjs.org/SNDST00M/Material_Dynmap" target="_blank"><img src="https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.1/assets/earthmc-surface.png"/></a></p>
 
 > The Burj Khalifa in New Dubai on the [EarthMC Minecraft server][earthmc].
 
@@ -32,7 +32,7 @@ Contributions, especially bug reports and feature requests, are all greatly appr
 
 Here are some of the things you can do to help:
 - [Reporting bugs or requesting new features][material-dynmap-issue]
-- [Opening pull requests][material-dynmap-pr]
+- [Opening pull requests][material-dynmap-pr] for [roadmap items][material-dynmap-roadmap]
 
 ----
 
@@ -44,3 +44,4 @@ Copyright © 2021 [SNDST00M](https://github.com/SNDST00M) and [other contributor
 <!-- Contributing -->
 [material-dynmap-issue]: https://github.com/millsp/material-candy/issues/new/choose/
 [material-dynmap-pr]: https://github.com/millsp/material-candy/compare/
+[material-dynmap-roadmap]: https://github.com/SNDST00M/material-dynmap/blob/main/CHANGELOG.md#roadmap
