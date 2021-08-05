@@ -1,0 +1,38 @@
+{
+  "name": "material-dynmap",
+  "version": "0.1.0",
+  "description": "Material styling for Bukkit's Dynmap MineCraft plugin.",
+  "keywords": [
+    "minecraft",
+    "bukkit",
+    "webbukkit",
+    "dynmap",
+    "material",
+    "userstyle"
+  ],
+  "author": {
+    "email": "sndst00m@outlook.com",
+    "name": "Munin M.",
+    "url": "https://github.com/SNDST00M/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SNDST00M/material-dynmap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SNDST00M/material-dynmap/issues"
+  },
+  "homepage": "https://github.com/SNDST00M/material-dynmap/blob/README.md",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "prepare": "npm run test",
+    "test": "npx eslint src --ext .js && npx stylelint \"src/*.css\""
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0"
+  }
+}

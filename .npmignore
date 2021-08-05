@@ -1,0 +1,8 @@
+node_modules
+.editorconfig
+.eslintignore
+.eslintrc.json
+.gitignore
+.prettierrc.json
+assets/*.png
+assets/*.svg
