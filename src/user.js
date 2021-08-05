@@ -2,16 +2,54 @@
 /* global GM_addElement */
 // ==UserScript==
 // @name            Material Dynmap
-// @version         0.1.0
+// @version         0.1.1
 // @description     Material styling for Bukkit's dynmap Minecraft plugin.
 // @author          2021, SNDST00M (https://github.com/SNDST00M/)
 // @license	        MIT
-// @homepage        https://github.com/SNDST00M/material-dynmap/blob/v0.1.0/README.md
-// @icon            https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.0/assets/icon.png
+// @homepage        https://github.com/SNDST00M/material-dynmap/blob/v0.1.1/README.md
+// @icon            https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.1/assets/icon.png
 // @updateURL       https://raw.githubusercontent.com/SNDST00M/material-dynmap/main/src/user.js
 // @downloadURL     https://raw.githubusercontent.com/SNDST00M/material-dynmap/main/src/user.js
 // @include         *://*/*
-// @exclude         *://*.(google|youtube|bing|msn|live|amazon|yahoo|wikipedia|live|reddit|netflix|microsoft|office|instagram|twitch|myshopify|naver|zoom|csdn|ebay|twitter|yy|apple|vk|baidu|qq|sohu|facebook|taobao|360|jd|weibo|sina|xinhuanet).*
+// @exclude         *://*.google.*
+// @exclude         *://*.youtube.*
+// @exclude         *://*.bing.*
+// @exclude         *://*.msn.*
+// @exclude         *://*.live.*
+// @exclude         *://*.amazon.*
+// @exclude         *://*.yahoo.*
+// @exclude         *://*.wikipedia.*
+// @exclude         *://*.live.*
+// @exclude         *://*.reddit.*
+// @exclude         *://*.netflix.*
+// @exclude         *://*.microsoft.*
+// @exclude         *://*.office.*
+// @exclude         *://*.instagram.*
+// @exclude         *://*.twitch.*
+// @exclude         *://*.myshopify.*
+// @exclude         *://*.naver.*
+// @exclude         *://*.zoom.*
+// @exclude         *://*.csdn.*
+// @exclude         *://*.ebay.*
+// @exclude         *://*.twitter.*
+// @exclude         *://*.apple.*
+// @exclude         *://discord.com/*
+// @exclude         *://*.slack.com/*
+// @exclude         *://*.whatsapp.com/*
+// @exclude         *://*.skype.com/*
+// @exclude         *://*.telegram.org/*
+// @exclude         *://*.vk.*
+// @exclude         *://*.yy.*
+// @exclude         *://*.baidu.*
+// @exclude         *://*.qq.*
+// @exclude         *://*.sohu.*
+// @exclude         *://*.facebook.*
+// @exclude         *://*.taobao.*
+// @exclude         *://*.360.*
+// @exclude         *://*.jd.*
+// @exclude         *://*.weibo.*
+// @exclude         *://*.sina.*
+// @exclude         *://*.xinhuanet.*
 // @grant           GM_addElement
 // ==/UserScript==
 (function(window, factory) {
@@ -72,5 +110,7 @@
 		type: "text/javascript"
 	});
 
-	document.head.querySelector("link[rel='icon']").href = "https://unpkg.com/material-dynmap@0.1.1/assets/icon.ico";
+	window.document.head
+		.querySelector("link[rel='icon']")
+		.href = "https://unpkg.com/material-dynmap@0.1.1/assets/icon.ico";
 }));
