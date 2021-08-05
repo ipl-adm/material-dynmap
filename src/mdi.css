@@ -1,0 +1,11 @@
+@font-face {
+	font-family: "Material Design Icons";
+	font-style: normal;
+	font-weight: normal;
+	src: url("https://unpkg.com/@mdi/font@5.9.55/fonts/materialdesignicons-webfont.eot?v=5.9.55");
+	src:
+		url("https://unpkg.com/@mdi/font@5.9.55/fonts/materialdesignicons-webfont.eot?#iefix&v=5.9.55") format("embedded-opentype"),
+		url("https://unpkg.com/@mdi/font@5.9.55/fonts/materialdesignicons-webfont.woff2?v=5.9.55") format("woff2"),
+		url("https://unpkg.com/@mdi/font@5.9.55/fonts/materialdesignicons-webfont.woff?v=5.9.55") format("woff"),
+		url("https://unpkg.com/@mdi/font@5.9.55/fonts/materialdesignicons-webfont.ttf?v=5.9.55") format("truetype");
+}

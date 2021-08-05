@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.9.55/css/materialdesignicons.css');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://unpkg.com/material-dynmap@0.1.1/src/mdi.css");
 
 :root {
 	font-family: Roboto, Arial, sans-serif;
@@ -43,7 +43,7 @@ body {
 .dynmap .leaflet-control-container .leaflet-control-zoom a:before {
 	direction: ltr;
 	display: inline-flex;
-	font-family: 'Material Design Icons', sans-serif;
+	font-family: "Material Design Icons", sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: normal;
@@ -85,16 +85,16 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-control-layers-selector:before {
-	content: '\\F012E';
+	content: "\\F012E";
 	cursor: pointer;
 }
 
 .dynmap .leaflet-control-container .leaflet-control-layers-selector:checked:before {
-	content: '\\F0132';
+	content: "\\F0132";
 }
 
 .dynmap .leaflet-control-container .leaflet-control-layers .leaflet-control-layers-toggle:before {
-	content: '\\F09FE';
+	content: "\\F09FE";
 }
 
 .dynmap .leaflet-control-container .leaflet-control-layers .leaflet-control-layers-toggle,
@@ -103,11 +103,11 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-control-zoom a:first-child:before {
-	content: '\\F0415';
+	content: "\\F0415";
 }
 
 .dynmap .leaflet-control-container .leaflet-control-zoom a:last-child:before {
-	content: '\\F0374';
+	content: "\\F0374";
 }
 
 .dynmap .leaflet-control-container .leaflet-chip-container {
@@ -265,10 +265,10 @@ body {
 }
 
 .dynmap .leaflet-control-container .dynmap-link .dynmap-link-button:before {
-	content: '\\F0337';
+	content: "\\F0337";
 	direction: ltr;
 	display: inline-flex;
-	font-family: 'Material Design Icons', sans-serif;
+	font-family: "Material Design Icons", sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: normal;
@@ -498,10 +498,10 @@ body {
 }
 
 .dynmap .compass:before {
-	content: '\\F018B';
+	content: "\\F018B";
 	direction: ltr;
 	display: inline-flex;
-	font-family: 'Material Design Icons', sans-serif;
+	font-family: "Material Design Icons", sans-serif;
 	font-size: 72px;
 	font-style: normal;
 	font-weight: normal;
@@ -578,7 +578,7 @@ body {
 .dynmap .largeclock .weather:before {
 	direction: ltr;
 	display: inline-flex;
-	font-family: 'Material Design Icons', sans-serif;
+	font-family: "Material Design Icons", sans-serif;
 	font-size: 27px;
 	font-style: normal;
 	font-weight: normal;
@@ -594,7 +594,7 @@ body {
 .dynmap .largeclock .weather:after {
 	direction: ltr;
 	display: inline-flex;
-	font-family: 'Material Design Icons', sans-serif;
+	font-family: "Material Design Icons", sans-serif;
 	font-size: 32px;
 	font-style: normal;
 	font-weight: normal;
@@ -611,13 +611,13 @@ body {
 .dynmap .largeclock .weather.sunny_day:before,
 .dynmap .largeclock .weather.stormy_day:before,
 .dynmap .largeclock .weather.thunder_day:before {
-	content: '\\F00E0';
+	content: "\\F00E0";
 }
 
 .dynmap .largeclock .weather.sunny_night:before,
 .dynmap .largeclock .weather.stormy_night:before,
 .dynmap .largeclock .weather.thunder_night:before {
-	content: '\\F00DD';
+	content: "\\F00DD";
 }
 
 .dynmap .largeclock .weather {
@@ -629,15 +629,15 @@ body {
 
 .dynmap .largeclock .weather.sunny_day:after,
 .dynmap .largeclock .weather.sunny_night:after {
-	content: '\\F0599';
+	content: "\\F0599";
 }
 
 .dynmap .largeclock .weather.stormy_day:after,
 .dynmap .largeclock .weather.stormy_night:after {
-	content: '\\F0596';
+	content: "\\F0596";
 }
 
 .dynmap .largeclock .weather.thunder_day:after,
 .dynmap .largeclock .weather.thunder_night:after {
-	content: '\\F0593';
+	content: "\\F0593";
 }
