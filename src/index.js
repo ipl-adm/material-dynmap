@@ -22,14 +22,14 @@
 
 	const style = document.createElement("link");
 	style.setAttribute("rel", "stylesheet");
-	style.href = "https://unpkg.com/material-dynmap@0.1.0/main.css";
+	style.href = "https://unpkg.com/material-dynmap@0.1.0/src/main.css";
 	style.id = "material-dynmap-style";
 	style.media = "not all";
 	document.body.append(style);
 
 	const script = document.createElement("script");
 	script.setAttribute("type", "text/javascript");
-	script.src = "https://unpkg.com/material-dynmap@0.1.0/app.js";
+	script.src = "https://unpkg.com/material-dynmap@0.1.0/src/app.js";
 	script.id = "material-dynmap-script";
 	document.body.appendChild(script);
 	document.head.querySelector("link[rel='icon']").href = "https://unpkg.com/material-dynmap@0.1.0/icon.ico";
