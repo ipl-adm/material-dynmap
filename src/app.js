@@ -33,7 +33,9 @@
 			window.clearInterval(window.materialDynmapHandle);
 			delete window.materialDynmapHandle;
 		}
-		window.document.getElementById("material-dynmap-styles").removeAttribute("media");
+		window.document.head
+			.querySelector("[href='https://unpkg.com/material-dynmap@0.1.1/src/main.css']")
+			.removeAttribute("media");
 
 		if (!window.dynmap.sidebar.get(0).classList.contains("pinned")) {
 			window.dynmap.sidebar.get(0).classList.add("pinned");
