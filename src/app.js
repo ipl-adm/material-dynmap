@@ -90,7 +90,7 @@
 			chip.textContent = world.title;
 			chip.title = name;
 			chip.onclick = function() {
-				window.dynmap.selectWorld(worlds[name], renderTypeLayers);
+				window.dynmap.selectWorld(worlds[name], renderTypeLayers.bind(this, types));
 			};
 			chips.appendChild(chip);
 		}
@@ -98,20 +98,17 @@
 		chips.classList.add("leaflet-chip-container");
 		types.classList.add("leaflet-type-container");
 
-		renderTypeLayers();
+		renderTypeLayers.call(this, types);
 
 		window.map._controlContainer.appendChild(chips);
 		window.map._controlContainer.appendChild(types);
 	}
 
-	function renderTypeLayers() {
-		if (!state.types) {
-			return;
-		}
+	function renderTypeLayers(types) {
 		const world = window.dynmap.world;
-		state.types.textContent = "";
-		state.types.appendChild(world.element.get(0).cloneNode(true));
-		state.types.querySelectorAll(".item").forEach(function(el) {
+		types.textContent = "";
+		types.appendChild(world.element.get(0).cloneNode(true));
+		types.querySelectorAll(".item").forEach(function(el) {
 			const typeName = Object.keys(world.maps)
 				.filter(name => el.childNodes[0].title === world.maps[name].options.title)[0];
 			el.classList.add(typeName);
