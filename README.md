@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/SNDST00M/material-dynmap">
-    <img alt="logo" title="material-dynmap" src="https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.0/assets/icon.svg" width="100" alt="Logo">
+    <img alt="logo" title="material-dynmap" src="https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.1/assets/icon.svg" width="100" alt="Logo">
   </a>
   <h1 align="center"><code>material-dynmap</code></h1>
   <h4 align="center">Material theming userscript for Webbukit's Dynmap plugin.</h4>
@@ -18,11 +18,11 @@
 
 ## Screenshots
 
-<p align="center"><a href="https://openuserjs.org/SNDST00M/Material_Dynmap" target="_blank"><img src="https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.0/assets/westeroscraft-surface.png"/></a></p>
+<p align="center"><a href="https://openuserjs.org/SNDST00M/Material_Dynmap" target="_blank"><img src="https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.1/assets/westeroscraft-surface.png"/></a></p>
 
 > The Red Keep in King's Landing on the [WesterosCraft Minecraft server][westeroscraft].
 
-<p align="center"><a href="https://openuserjs.org/SNDST00M/Material_Dynmap" target="_blank"><img src="https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.0/assets/westeroscraft-surface.png"/></a></p>
+<p align="center"><a href="https://openuserjs.org/SNDST00M/Material_Dynmap" target="_blank"><img src="https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.1.1/assets/westeroscraft-surface.png"/></a></p>
 
 > The Burj Khalifa in New Dubai on the [EarthMC Minecraft server][earthmc].
 
