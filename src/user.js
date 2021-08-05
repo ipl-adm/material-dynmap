@@ -89,26 +89,26 @@
 	}
 
 	if (login) {
-		GM_addElement("link", {
+		const loginStyle = GM_addElement("link", {
 			href: "https://unpkg.com/material-dynmap@0.1.1/src/login.css",
-			id: "material-dynmap-login-style",
 			rel: "stylesheet"
 		});
+		loginStyle.id = "material-dynmap-login-style";
 		return;
 	}
 
-	GM_addElement("link", {
+	const style = GM_addElement("link", {
 		href: "https://unpkg.com/material-dynmap@0.1.1/src/main.css",
-		id: "material-dynmap-style",
 		media: "not all",
 		rel: "stylesheet"
 	});
+	style.id = "material-dynmap-style";
 
-	GM_addElement("script", {
-		id: "material-dynmap-script",
+	const script = GM_addElement("script", {
 		src: "https://unpkg.com/material-dynmap@0.1.1/src/app.js",
 		type: "text/javascript"
 	});
+	script.id = "material-dynmap-script";
 
 	window.document.head
 		.querySelector("link[rel='icon']")
