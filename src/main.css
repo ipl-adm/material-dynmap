@@ -176,13 +176,13 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .item {
-	background: #142326cc !important;
-	transition: background 2s;
+	background-color: #212121 !important;
+	transition: background-color 2s;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .item:hover,
 .dynmap .leaflet-control-container .leaflet-type-container .item.selected {
-	background: #142326 !important;
+	background-color: #616161 !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item,
@@ -201,10 +201,10 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item.surface:after {
-	border: 5px solid #437c33;
+	border: 5px solid #1b6a42;
 	border-radius: 6px;
 	bottom: 2px;
-	box-shadow: 0 0 8px 8px #142326;
+	box-shadow: 0 0 8px 8px #212121;
 	content: '';
 	display: block;
 	left: 2px;
@@ -222,12 +222,12 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype:before {
-	color: #fff;
+	color: #ffffff;
 	content: attr(title);
 	display: flex;
 	font-size: 11px;
 	margin: 5px auto;
-	text-shadow: #000c 0 -5px 10px;
+	text-shadow: #000000cc 0 -5px 10px;
 	z-index: 121;
 }
 
@@ -245,7 +245,7 @@ body {
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Surface"]:before {
 	font-size: inherit;
-	text-shadow: #000 0 0 10px;
+	text-shadow: #000000 0 0 10px;
 	transform: rotateZ(-45.5deg) scale(142%) translateX(21px) translateY(-4.25px);
 	transform-origin: bottom right;
 }
@@ -488,10 +488,10 @@ body {
 
 .dynmap .compass {
 	align-items: center;
-	background: radial-gradient(#e53935, #e53935 29px, #212121 29px, #212121);
+	background: radial-gradient(#e53935, #e53935 29px, #616161 29px, #616161);
 	border: none;
 	border-radius: 50%;
-	color: #e5e5e5;
+	color: #212121;
 	display: flex;
 	font-size: 72px;
 	height: 72px;
@@ -526,11 +526,11 @@ body {
 }
 
 .dynmap .alertbox {
-	background-color: #e53935;
+	background-color: #f82b3b;
 	border-radius: 4px;
 	bottom: 52px;
 	box-shadow: 0 2px 4px #2121214d;
-	color: #fff;
+	color: #ffffff;
 	left: initial;
 	margin: 0;
 	right: 10px;

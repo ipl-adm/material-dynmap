@@ -40,6 +40,10 @@ body {
 	width: 100%;
 }
 
+.dynmaplogin table tr:nth-child(3) th {
+	margin-top: 40px;
+}
+
 .dynmaplogin,
 .dynmaplogin table,
 .dynmaplogin tr,
@@ -103,15 +107,20 @@ body {
 }
 
 .dynmaplogin input[type="submit"] {
-	background-color: #d32f2f;
+	background-color: #1b6a42;
 	border: none;
 	border-end-end-radius: 4px;
 	border-end-start-radius: 4px;
 	border-radius: 4px;
 	border-start-end-radius: 4px;
 	border-start-start-radius: 4px;
+	box-shadow:
+		#00000040 0 -4px inset,
+		#21212150 0 4px inset,
+		#21212150 -4px 0 inset,
+		#00000040 4px 0 inset;
 	box-sizing: border-box;
-	color: rgb(255, 255, 255);
+	color: #ffffff;
 	cursor: pointer;
 	font-family: "Open Sans", Roboto, Arial, sans-serif;
 	font-weight: bold;
@@ -126,6 +135,6 @@ body {
 
 .dynmaplogin input[type="submit"]:hover,
 .dynmaplogin input[type="submit"]:active {
-	background-color: #c62828;
-	transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+	background-color: #424242;
+	transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }

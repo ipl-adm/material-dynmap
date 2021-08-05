@@ -10,6 +10,7 @@
       }
     ],
     "color-hex-case": "lower",
+    "color-hex-length": "long",
     "comment-empty-line-before": null,
     "indentation": "tab",
     "order/properties-alphabetical-order": true,
