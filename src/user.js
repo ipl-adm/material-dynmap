@@ -38,6 +38,11 @@
 // @exclude         *://*.whatsapp.com/*
 // @exclude         *://*.skype.com/*
 // @exclude         *://*.telegram.org/*
+// @exclude         *://*.tumblr.com/*
+// @exclude         *://*.steampowered.com/*
+// @exclude         *://steamcommunity.com/*
+// @exclude         *://*.github.com/*
+// @exclude         *://*.gitlab.com/*
 // @exclude         *://*.vk.*
 // @exclude         *://*.yy.*
 // @exclude         *://*.baidu.*
