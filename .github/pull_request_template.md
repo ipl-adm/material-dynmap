@@ -31,10 +31,10 @@
 
 #### Is there any breaking changes?
 
-<!-- Fill the following checklist. -->
+<!-- Fill the following checklist by inserting (Y/N) after. -->
 - [ ] Yes, I added userscript features & documented it.
-- [ ] No,  I added to existing userscript features & documented it.
-- [ ] Yes, I changed existing userscript features.
+- [x] No,  I added to existing userscript features & documented it.
+- [ ] Yes, I revamped existing userscript features or added configuration.
 - [ ] No,  I fixed existing userscript features.
 - [ ] I don't know.
 
@@ -42,3 +42,4 @@
 
 <!-- Please help with the PR process. -->
 <!-- Leave any extra useful information or mention someone who is concerned. -->
+Remove this section if it is empty.
