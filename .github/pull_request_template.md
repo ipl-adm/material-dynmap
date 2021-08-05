@@ -19,23 +19,23 @@
 
 #### What changes have you made?
 
-- Changed this to add/fix this
-- Changed that to add/fix this
+- Updated this to add/fix this
+- Updated that to add/fix this
 - ...
 
-#### What tests have you updated?
+#### What tests have you completed?
 
-- Tested this in `examples/...`
-- Tested that in `examples/...`
+- Tested this in Chrome 91.
+- Tested this in Firefox 90.
 - ...
 
 #### Is there any breaking changes?
 
 <!-- Fill the following checklist. -->
-- [ ] Yes, I changed the color scheme & documented it.
-- [ ] No,  I added to the color scheme & documented it.
-- [ ] Yes, I changed existing theme rules.
-- [ ] No,  I added to the existing theme rules.
+- [ ] Yes, I added userscript features & documented it.
+- [ ] No,  I added to existing userscript features & documented it.
+- [ ] Yes, I changed existing userscript features.
+- [ ] No,  I fixed existing userscript features.
 - [ ] I don't know.
 
 #### Anything else worth mentioning?
