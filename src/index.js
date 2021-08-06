@@ -39,7 +39,6 @@
 		loginStyle.setAttribute("rel", "stylesheet");
 		loginStyle.href = "https://unpkg.com/material-dynmap@0.2.1/src/login.css";
 		loginStyle.id = "material-dynmap-login-style";
-		loginStyle.media = "not all";
 		window.document.head.append(loginStyle);
 	}
 
