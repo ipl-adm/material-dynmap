@@ -22,9 +22,9 @@
 
 > The Red Keep in King's Landing on the [WesterosCraft Minecraft server][westeroscraft].
 
-<p align="center"><a href="https://openuserjs.org/SNDST00M/Material_Dynmap" target="_blank"><img src="https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.2.1/assets/earthmc-surface.png"/></a></p>
+<p align="center"><a href="https://openuserjs.org/SNDST00M/Material_Dynmap" target="_blank"><img src="https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.2.1/assets/earthmc-login.png"/></a></p>
 
-> The Burj Khalifa in New Dubai on the [EarthMC Minecraft server][earthmc].
+> The Dynmap login page on the [EarthMC Minecraft server][earthmc].
 
 ## Contributing
 
