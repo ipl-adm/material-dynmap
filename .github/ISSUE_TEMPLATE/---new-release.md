@@ -1,7 +1,7 @@
 ---
 name: "🛠 New Release"
 about: "Publish changes 🆙"
-labels: [context-api, scope-design, status-tracking, type-epic]
+labels: [context-package, scope-design, status-tracking, type-epic]
 
 ---
 
