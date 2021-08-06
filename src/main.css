@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap");
-@import url("https://unpkg.com/material-dynmap@0.2.1/src/mdi.css");
+@import url("https://unpkg.com/material-dynmap@0.2.2/src/mdi.css");
 
 :root {
 	font-family: Roboto, Arial, sans-serif;
@@ -229,12 +229,12 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Flat"] {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.2.1/assets/world-type.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.2.2/assets/world-type.svg") !important;
 	background-size: cover;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Surface"] {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.2.1/assets/world-type.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.2.2/assets/world-type.svg") !important;
 	background-size: cover;
 	font-size: 5.5px;
 	transform: rotateZ(45.5deg) scale(1.42);
