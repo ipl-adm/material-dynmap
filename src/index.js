@@ -37,7 +37,7 @@
 	if (login) {
 		const loginStyle = window.document.createElement("link");
 		loginStyle.setAttribute("rel", "stylesheet");
-		loginStyle.href = "https://unpkg.com/material-dynmap@0.2.0/src/login.css";
+		loginStyle.href = "https://unpkg.com/material-dynmap@0.2.1/src/login.css";
 		loginStyle.id = "material-dynmap-login-style";
 		loginStyle.media = "not all";
 		window.document.head.append(loginStyle);
@@ -45,18 +45,18 @@
 
 	const style = window.document.createElement("link");
 	style.setAttribute("rel", "stylesheet");
-	style.href = "https://unpkg.com/material-dynmap@0.2.0/src/main.css";
+	style.href = "https://unpkg.com/material-dynmap@0.2.1/src/main.css";
 	style.id = "material-dynmap-style";
 	style.media = "not all";
 	window.document.head.append(style);
 
 	const script = document.createElement("script");
 	script.setAttribute("type", "text/javascript");
-	script.src = "https://unpkg.com/material-dynmap@0.2.0/src/app.js";
+	script.src = "https://unpkg.com/material-dynmap@0.2.1/src/app.js";
 	script.id = "material-dynmap-script";
 	window.document.head.appendChild(script);
 
 	window.document.head
 		.querySelector("link[rel='icon']")
-		.href = "https://unpkg.com/material-dynmap@0.2.0/assets/icon.ico";
+		.href = "https://unpkg.com/material-dynmap@0.2.1/assets/icon.ico";
 }));

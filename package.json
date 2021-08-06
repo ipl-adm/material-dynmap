@@ -1,6 +1,6 @@
 {
   "name": "material-dynmap",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Material styling for Bukkit's Dynmap Minecraft plugin.",
   "keywords": [
     "minecraft",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "prepare": "npm run test",
+    "prepare": "npm i --package-lock-only && npm run test",
     "test": "npx eslint src --ext .js && npx stylelint \"src/*.css\""
   },
   "devDependencies": {
