@@ -23,7 +23,7 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-control-layers {
-	background: #212121;
+	background-color: #212121;
 	border: none;
 	box-sizing: border-box;
 	color: #e0e0e0;
@@ -99,7 +99,7 @@ body {
 
 .dynmap .leaflet-control-container .leaflet-control-layers .leaflet-control-layers-toggle,
 .dynmap .leaflet-control-container .leaflet-control-layers-expanded .leaflet-control-layers-toggle:before {
-	background: none;
+	background-color: transparent;
 }
 
 .dynmap .leaflet-control-container .leaflet-control-zoom a:first-child:before {
@@ -134,7 +134,7 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-chip-container .leaflet-chip {
-	background: #212121;
+	background-color: #212121;
 	border-radius: 16px;
 	box-sizing: border-box;
 	cursor: pointer;
@@ -163,9 +163,11 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item {
+	background-color: #212121 !important;
 	border-radius: 8px;
 	cursor: pointer;
 	overflow: hidden;
+	transition: background-color 2s, box-shadow 2s;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .item,
@@ -175,14 +177,9 @@ body {
 	margin: 5px 2px;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .item {
-	background-color: #212121 !important;
-	transition: background-color 2s;
-}
-
 .dynmap .leaflet-control-container .leaflet-type-container .item:hover,
 .dynmap .leaflet-control-container .leaflet-type-container .item.selected {
-	background-color: #616161 !important;
+	background-color: #424242 !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item,
@@ -201,10 +198,10 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item.surface:after {
-	border: 5px solid #1b6a42;
+	border: 5px solid #437c33;
 	border-radius: 6px;
 	bottom: 2px;
-	box-shadow: 0 0 8px 8px #212121;
+	box-shadow: 0 0 8px 8px #424242;
 	content: '';
 	display: block;
 	left: 2px;
@@ -291,7 +288,8 @@ body {
 .dynmap .leaflet-control-container .leaflet-control-zoom a,
 .dynmap .leaflet-control-container .dynmap-link .dynmap-link-button {
 	align-items: center;
-	background: #212121;
+	background-color: #212121;
+	background-image: none;
 	border: none;
 	color: #e0e0e0;
 	display: flex;
@@ -303,11 +301,11 @@ body {
 
 .dynmap .leaflet-control-container .logincontainer .loginbutton {
 	align-items: center;
-	background-color: rgb(33, 33, 33);
+	background-color: #212121;
 	border: none;
 	border-radius: 4px;
 	bottom: 10px;
-	color: rgb(224, 224, 224);
+	color: #e0e0e0;
 	cursor: pointer;
 	display: flex;
 	font-size: 11px;
@@ -321,7 +319,7 @@ body {
 }
 
 .dynmap .sidebar {
-	background: #212121;
+	background-color: #212121;
 	border: none;
 	display: flex;
 	flex-direction: column;
@@ -412,7 +410,7 @@ body {
 }
 
 .dynmap .leaflet-container .coord-control {
-	background: #212121;
+	background-color: #212121;
 	border: none;
 	border-radius: 10px;
 	color: #e0e0e0;
@@ -488,10 +486,11 @@ body {
 
 .dynmap .compass {
 	align-items: center;
-	background: radial-gradient(#e53935, #e53935 29px, #616161 29px, #616161);
+	background-color: transparent;
+	background-image: radial-gradient(#e53935, #e53935 29px, #212121 29px, #212121);
 	border: none;
 	border-radius: 50%;
-	color: #212121;
+	color: #e5e5e5;
 	display: flex;
 	font-size: 72px;
 	height: 72px;
@@ -526,7 +525,7 @@ body {
 }
 
 .dynmap .alertbox {
-	background-color: #f82b3b;
+	background-color: #e53935;
 	border-radius: 4px;
 	bottom: 52px;
 	box-shadow: 0 2px 4px #2121214d;
@@ -544,7 +543,7 @@ body {
 
 .dynmap .largeclock {
 	align-items: center;
-	background: #212121;
+	background-color: #212121;
 	border: none;
 	border-radius: 10px;
 	color: #e0e0e0;
@@ -628,7 +627,8 @@ body {
 }
 
 .dynmap .largeclock .weather {
-	background: none;
+	background-color: transparent;
+	background-image: none;
 	margin-left: 0.4em;
 	position: static;
 	width: auto;
