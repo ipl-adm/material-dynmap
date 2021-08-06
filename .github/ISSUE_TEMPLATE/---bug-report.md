@@ -25,11 +25,11 @@ labels: [context-script, scope-stability, status-tracking, type-bug]
 
 #### Possible solution
 
-<!-- Only if you have suggestions on a fix for the bug. -->
+<!-- Only if you have suggestions on a fix for the bug. If not, please remove the section. -->
 
 #### Additional context
 
 <!-- Add any other context about the problem here (, , ...). -->
 - Browser version:
-- Extensions
-- OS
+- Extensions:
+- OS version:
