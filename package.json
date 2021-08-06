@@ -1,14 +1,14 @@
 {
   "name": "material-dynmap",
-  "version": "0.2.1",
-  "description": "Material styling for Bukkit's Dynmap Minecraft plugin.",
+  "version": "0.2.2",
+  "description": "Material theming userscript for Bukkit's Dynmap Minecraft plugin.",
   "keywords": [
     "minecraft",
     "bukkit",
     "webbukkit",
     "dynmap",
     "material",
-    "userstyle"
+    "userscript"
   ],
   "author": {
     "email": "sndst00m@outlook.com",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/SNDST00M/material-dynmap/issues"
   },
-  "homepage": "https://github.com/SNDST00M/material-dynmap/blob/README.md",
+  "homepage": "https://github.com/SNDST00M/material-dynmap/blob/main/README.md",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
