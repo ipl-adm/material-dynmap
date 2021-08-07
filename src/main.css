@@ -155,7 +155,7 @@ body {
 	left: 288px;
 	padding: 2px;
 	position: fixed;
-	z-index: 120;
+	z-index: 121;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maplist {
@@ -163,11 +163,11 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item {
-	background-color: #212121 !important;
+	background-color: #212121cc !important;
 	border-radius: 8px;
 	cursor: pointer;
 	overflow: hidden;
-	transition: background-color 2s, box-shadow 2s;
+	transition: background-color 0.2s;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .item,
@@ -177,9 +177,8 @@ body {
 	margin: 5px 2px;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .item:hover,
-.dynmap .leaflet-control-container .leaflet-type-container .item.selected {
-	background-color: #424242 !important;
+.dynmap .leaflet-control-container .leaflet-type-container .item:hover {
+	background-color: #212121 !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item,
@@ -201,14 +200,19 @@ body {
 	border: 5px solid #437c33;
 	border-radius: 6px;
 	bottom: 2px;
-	box-shadow: 0 0 8px 8px #424242;
+	box-shadow: 0 0 0 2px #212121;
 	content: '';
 	display: block;
 	left: 2px;
 	position: absolute;
 	right: 2px;
 	top: 2px;
+	transition: box-shadow 0.2s;
 	z-index: 121;
+}
+
+.dynmap .leaflet-control-container .leaflet-type-container .world .item.surface:hover:after {
+	box-shadow: 0 0 0 2px #000000;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype {
@@ -242,7 +246,7 @@ body {
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Surface"]:before {
 	font-size: inherit;
-	text-shadow: #000000 0 0 10px;
+	text-shadow: #000000 0 0 7px;
 	transform: rotateZ(-45.5deg) scale(142%) translateX(21px) translateY(-4.25px);
 	transform-origin: bottom right;
 }
@@ -329,13 +333,6 @@ body {
 	position: static;
 	transition: width 0.2s ease-in-out;
 	width: 270px;
-}
-
-@media screen and (max-width: 640px) {
-	.dynmap .sidebar {
-		overflow: hidden;
-		width: 0;
-	}
 }
 
 .dynmap .sidebar legend {
@@ -647,4 +644,15 @@ body {
 .dynmap .largeclock .weather.thunder_day:after,
 .dynmap .largeclock .weather.thunder_night:after {
 	content: "\F0593";
+}
+
+@media screen and (max-width: 640px) {
+	.dynmap .sidebar {
+		overflow: hidden;
+		width: 0;
+	}
+
+	.dynmap .leaflet-control-container .leaflet-type-container .world {
+		left: 0;
+	}
 }
