@@ -1,3 +1,4 @@
+/* eslint-env browser */
 (function(window, factory) {
 	if (![...window.document.body.children].filter(isDynmapContainer).length) {
 		return;
@@ -25,6 +26,11 @@
 		return e.tagName.toLowerCase() === "div" && (e.id === "mcmap" || e.className === "dynmaplogin");
 	}
 }(this, function(window, login) {
+	if (window.materialDynmap || window.document.getElementbyId("#material-dynmap-script")) {
+		return;
+	}
+	window.materialDynmap = true;
+
 	if (!window.DynMap && !login) {
 		return;
 	}

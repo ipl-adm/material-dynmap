@@ -84,6 +84,11 @@
 		return e.tagName.toLowerCase() === "div" && (e.id === "mcmap" || e.className === "dynmaplogin");
 	}
 }(this.unsafeWindow, function(window, login) {
+	if (window.materialDynmap || window.document.getElementbyId("#material-dynmap-script")) {
+		return;
+	}
+	window.materialDynmap = true;
+
 	if (!window.DynMap && !login) {
 		return;
 	}
