@@ -1,10 +1,17 @@
 {
   "env": {
     "browser": true,
-		"es2021": true
+    "commonjs": true,
+    "es2021": true,
+    "greasemonkey": true,
+    "jquery": true,
+    "node": true
   },
 	"extends": "eslint:recommended",
-	"parserOptions": {
+  "globals": {
+    "GM_addElement": "readonly"
+  },
+  "parserOptions": {
 		"ecmaVersion": 12
 	},
   "ignorePatterns": [

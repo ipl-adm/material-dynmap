@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-/* global GM_addElement */
 // ==UserScript==
 // @name            Material Dynmap
 // @version         0.2.2
