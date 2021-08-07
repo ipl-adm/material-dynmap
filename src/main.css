@@ -653,6 +653,6 @@ body {
 	}
 
 	.dynmap .leaflet-control-container .leaflet-type-container .world {
-		left: 0;
+		left: 18px;
 	}
 }
