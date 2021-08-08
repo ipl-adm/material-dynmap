@@ -45,7 +45,15 @@
 		loginStyle.setAttribute("rel", "stylesheet");
 		loginStyle.href = "https://unpkg.com/material-dynmap@0.2.2/src/login.css";
 		loginStyle.id = "material-dynmap-login-style";
+		loginStyle.addEventListener("load", function() {
+			const materialDynmapLoaded = new CustomEvent("material-dynmap.load", {
+				bubbles: true,
+				detail: { login: true }
+			});
+			window.document.dispatchEvent(materialDynmapLoaded);
+		});
 		window.document.head.append(loginStyle);
+		return;
 	}
 
 	const style = window.document.createElement("link");

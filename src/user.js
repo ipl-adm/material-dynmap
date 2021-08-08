@@ -103,21 +103,25 @@
 			rel: "stylesheet"
 		});
 		loginStyle.id = "material-dynmap-login-style";
-		return;
+		const materialDynmapLoaded = new CustomEvent("material-dynmap.load", {
+			bubbles: true,
+			detail: { login: true }
+		});
+		window.document.dispatchEvent(materialDynmapLoaded);
+	} else {
+		const style = GM_addElement("link", {
+			href: "https://unpkg.com/material-dynmap@0.2.2/src/main.css",
+			media: "not all",
+			rel: "stylesheet"
+		});
+		style.id = "material-dynmap-style";
+
+		const script = GM_addElement("script", {
+			src: "https://unpkg.com/material-dynmap@0.2.2/src/app.js",
+			type: "text/javascript"
+		});
+		script.id = "material-dynmap-script";
 	}
-
-	const style = GM_addElement("link", {
-		href: "https://unpkg.com/material-dynmap@0.2.2/src/main.css",
-		media: "not all",
-		rel: "stylesheet"
-	});
-	style.id = "material-dynmap-style";
-
-	const script = GM_addElement("script", {
-		src: "https://unpkg.com/material-dynmap@0.2.2/src/app.js",
-		type: "text/javascript"
-	});
-	script.id = "material-dynmap-script";
 
 	window.document.head
 		.querySelector("link[rel='icon']")

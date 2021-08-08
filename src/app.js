@@ -102,6 +102,12 @@
 
 		window.map._controlContainer.appendChild(chips);
 		window.map._controlContainer.appendChild(types);
+
+		const materialDynmapLoaded = new CustomEvent("material-dynmap.load", {
+			bubbles: true,
+			detail: { login: false }
+		});
+		window.document.dispatchEvent(materialDynmapLoaded);
 	}
 
 	function renderTypeLayers(types) {
