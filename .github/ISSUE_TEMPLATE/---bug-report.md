@@ -6,6 +6,11 @@ labels: [context-script, scope-stability, status-tracking, type-bug]
 
 ## 🧱 Bug Report
 
+#### Checklist
+
+- [ ] I'm using the latest version of `material-dynmap` available.
+- [ ] I searched [existing issues][material-dynmap-issues], open & closed. Yes, my issue is new.
+
 #### Describe the bug
 
 <!-- A clear and concise description of what the bug is. -->
@@ -33,3 +38,6 @@ labels: [context-script, scope-stability, status-tracking, type-bug]
 - Browser version:
 - Extensions:
 - OS version:
+
+<!-- Checklist -->
+[material-dynmap-issues]: https://github.com/SNDST00M/material-dynmap/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
