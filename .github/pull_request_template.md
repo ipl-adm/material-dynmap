@@ -30,8 +30,6 @@
 - [ ] Tested this in Opera .
 - [ ] Tested this in Electron .
 
-#### Checklist
-
 #### Anything else worth mentioning?
 
 <!-- Please help with the PR process. Remove this section if it is empty. -->
