@@ -16,6 +16,9 @@
 // @exclude         *://*.msn.*
 // @exclude         *://*.live.*
 // @exclude         *://*.amazon.*
+// @exclude         *://*.ebay.*
+// @exclude         *://*.gmarket.*
+// @exclude         *://*.gittigidiyor.*
 // @exclude         *://*.yahoo.*
 // @exclude         *://*.wikipedia.*
 // @exclude         *://*.live.*
@@ -25,6 +28,11 @@
 // @exclude         *://*.office.*
 // @exclude         *://*.instagram.*
 // @exclude         *://*.twitch.*
+// @exclude         *://vimeo.com
+// @exclude         *://*.dailymotion.com
+// @exclude         *://bilibili.com
+// @exclude         *://*.bilibili.com
+// @exclude         *://*.nicovideo.jp
 // @exclude         *://*.myshopify.*
 // @exclude         *://*.naver.*
 // @exclude         *://*.zoom.*
@@ -40,7 +48,7 @@
 // @exclude         *://*.tumblr.com/*
 // @exclude         *://*.steampowered.com/*
 // @exclude         *://steamcommunity.com/*
-// @exclude         *://*.github.com/*
+// @exclude         *://github.com/*
 // @exclude         *://*.gitlab.com/*
 // @exclude         *://*.vk.*
 // @exclude         *://*.yy.*
