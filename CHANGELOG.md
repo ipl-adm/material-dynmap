@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.3.0
+
+<a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.3.0/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-08-08&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /> <a href="https://github.com/SNDST00M/material-dynmap/projects/6/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=v0.3.0&logo=trello&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/milestone/6"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=v0.3.0&logo=github&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
+
+- Add cross-platform installation guide.
+- Add double run protection to entrypoints.
+- Migrate from [UNPKG] to [JSDelivr].
+- Add `"material-dynmap.load"` event to `window` and `document`.
+- Add Github and video hosts to userscript exclusion list.
+- Add documentation for source code folder.
+- Improve positioning and content of issue checklists.
+
 ## 0.2.2
 
 <a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.2.2/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-08-06&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /> <a href="https://github.com/SNDST00M/material-dynmap/projects/5/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=v0.2.2&logo=trello&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/milestone/5"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=v0.2.2&logo=github&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
@@ -54,6 +66,9 @@
 - Investigate [Webkit fractional zoom bugfix][leaflet-issue-3575].
 - Improve mobile UX and script compatibility.
 
+<!-- 0.3.0 -->
+[unpkg]: https://unpkg.com
+[jsdelivr]: https://www.jsdelivr.com
 <!-- Roadmap -->
 [leaflet-issue-3575]: https://github.com/Leaflet/Leaflet/issues/3575
 [nativefier]: https://github.com/nativefier/nativefier
