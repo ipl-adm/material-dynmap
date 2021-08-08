@@ -40,6 +40,10 @@
 		delete window.materialDynmapHandle;
 	}
 
+	if (new window.URLSearchParams(window.location.search).get("nogui") === "true") {
+		return;
+	}
+
 	if (login) {
 		const loginStyle = window.document.createElement("link");
 		loginStyle.setAttribute("rel", "stylesheet");

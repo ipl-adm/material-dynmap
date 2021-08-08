@@ -105,6 +105,10 @@
 		delete window.materialDynmapHandle;
 	}
 
+	if (new window.URLSearchParams(window.location.search).get("nogui") === "true") {
+		return;
+	}
+
 	if (login) {
 		const loginStyle = GM_addElement("link", {
 			href: "https://cdn.jsdelivr.net/npm/material-dynmap@0.2.2/src/login.css",

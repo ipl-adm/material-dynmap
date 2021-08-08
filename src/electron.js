@@ -49,6 +49,10 @@
 		delete global.materialDynmapHandle;
 	}
 
+	if (new window.URLSearchParams(window.location.search).get("nogui") === "true") {
+		return;
+	}
+
 	if (login) {
 		const loginStyle = global.document.createElement("link");
 		loginStyle.setAttribute("rel", "stylesheet");
