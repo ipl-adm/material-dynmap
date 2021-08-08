@@ -1,4 +1,5 @@
 .editorconfig
+.electron
 .eslintignore
 .eslintrc.json
 .gitignore
