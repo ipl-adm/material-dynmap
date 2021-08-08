@@ -2,10 +2,11 @@
 
 <!-- Fill the following checklist. -->
 - [ ] Used a clear / meaningful title for this pull request.
-- [ ] Tested the changes in your userscript manager.
+- [ ] Committed the changes and tested them in your userscript manager.
 - [ ] Tested all entrypoints for cross-browser support (`src` folder).
 - [ ] Have read the **Contributing** part of the **README**.
 - [ ] Passed `npm test`.
+- [ ] I noted my changes in the pull request body and/or changelog.
 
 <!-- Complete the following parts. -->
 
@@ -30,10 +31,6 @@
 - [ ] Tested this in Electron .
 
 #### Checklist
-
-<!-- Fill the following checklist and remove unused tasks. -->
-- [ ] I have committed and tested the large majority of features.
-- [ ] I noted my changes in the description and/or changelog.
 
 #### Anything else worth mentioning?
 

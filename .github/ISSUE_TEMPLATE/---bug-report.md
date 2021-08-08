@@ -6,8 +6,6 @@ labels: [context-script, scope-stability, status-tracking, type-bug]
 
 ## 🧱 Bug Report
 
-#### Checklist
-
 - [ ] I'm using the latest version of `material-dynmap` available.
 - [ ] I searched [existing issues][material-dynmap-issues], open & closed. Yes, my issue is new.
 

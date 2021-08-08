@@ -7,8 +7,6 @@ labels: [context-api, scope-design, status-tracking, type-feature]
 
 ## 🏗 Feature Request
 
-#### Checklist
-
 - [ ] I'm using the latest version of `material-dynmap` available.
 - [ ] I searched [existing issues][material-dynmap-issues], open & closed. Yes, my issue is new.
 
