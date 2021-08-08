@@ -52,7 +52,6 @@
 ## Roadmap
 
 - Investigate [Webkit fractional zoom bugfix][leaflet-issue-3575].
-- Package script as Electron app using [`nativefier`][nativefier].
 - Improve mobile UX and script compatibility.
 
 <!-- Roadmap -->
