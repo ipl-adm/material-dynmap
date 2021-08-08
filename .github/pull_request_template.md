@@ -23,19 +23,17 @@
 
 #### What tests have you completed?
 
-- Tested this in Chrome 92.
-- Tested this in Edge 92.
-- Tested this in Firefox 90.
-- Tested this in Opera 78.
+- [ ] Tested this in Chrome .
+- [ ] Tested this in Edge .
+- [ ] Tested this in Firefox .
+- [ ] Tested this in Opera .
+- [ ] Tested this in Electron .
 
-#### Is there any breaking changes?
+#### Checklist
 
 <!-- Fill the following checklist and remove unused tasks. -->
-- [ ] Yes, I added userscript features & documented them in the changelog.
-- [ ] No,  I added to existing userscript features  & documented them in the changelog.
-- [ ] Yes, I revamped existing userscript features or added configuration.
-- [ ] No,  I fixed existing userscript features & updated the changelog.
-- [ ] I don't know.
+- [ ] I have committed and tested the large majority of features.
+- [ ] I noted my changes in the description and/or changelog.
 
 #### Anything else worth mentioning?
 
