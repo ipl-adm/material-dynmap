@@ -107,7 +107,7 @@
 
 	if (login) {
 		const loginStyle = GM_addElement("link", {
-			href: "https://unpkg.com/material-dynmap@0.2.2/src/login.css",
+			href: "https://cdn.jsdelivr.net/npm/material-dynmap@0.2.2/src/login.css",
 			rel: "stylesheet"
 		});
 		loginStyle.id = "material-dynmap-login-style";
@@ -118,14 +118,14 @@
 		window.document.dispatchEvent(materialDynmapLoaded);
 	} else {
 		const style = GM_addElement("link", {
-			href: "https://unpkg.com/material-dynmap@0.2.2/src/main.css",
+			href: "https://cdn.jsdelivr.net/npm/material-dynmap@0.2.2/src/main.css",
 			media: "not all",
 			rel: "stylesheet"
 		});
 		style.id = "material-dynmap-style";
 
 		const script = GM_addElement("script", {
-			src: "https://unpkg.com/material-dynmap@0.2.2/src/app.js",
+			src: "https://cdn.jsdelivr.net/npm/material-dynmap@0.2.2/src/app.js",
 			type: "text/javascript"
 		});
 		script.id = "material-dynmap-script";
@@ -133,5 +133,5 @@
 
 	window.document.head
 		.querySelector("link[rel='icon']")
-		.href = "https://unpkg.com/material-dynmap@0.2.2/assets/icon.ico";
+		.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.2.2/assets/icon.ico";
 }));

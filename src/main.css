@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap");
-@import url("https://unpkg.com/material-dynmap@0.2.2/src/mdi.css");
+@import url("https://cdn.jsdelivr.net/npm/material-dynmap@0.2.2/src/mdi.css");
 
 :root {
 	font-family: Roboto, Arial, sans-serif;
