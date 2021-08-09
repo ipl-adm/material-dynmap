@@ -233,28 +233,18 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Flat"] {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.3.0/assets/world-type.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.3.0/assets/minimap-flat.svg") !important;
 	background-size: cover;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Surface"] {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.3.0/assets/world-type.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.3.0/assets/minimap-surface.svg") !important;
 	background-size: cover;
-	font-size: 5.5px;
-	transform: rotateZ(45.5deg) scale(1.42);
-}
-
-.dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Surface"]:before {
-	font-size: inherit;
-	text-shadow: #000000 0 0 7px;
-	transform: rotateZ(-45.5deg) scale(142%) translateX(21px) translateY(-4.25px);
-	transform-origin: bottom right;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Topography"] {
-	background-image: url("https://raw.githubusercontent.com/JLyne/LiveAtlas/master/src/assets/icons/block_nether_flat.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.3.0/assets/minimap-topology.svg") !important;
 	background-size: cover;
-	filter: hue-rotate(180deg) contrast(1.4);
 }
 
 .dynmap .leaflet-control-container .dynmap-link .dynmap-link-button {
