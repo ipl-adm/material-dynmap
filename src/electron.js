@@ -56,25 +56,25 @@
 	if (login) {
 		const loginStyle = global.document.createElement("link");
 		loginStyle.setAttribute("rel", "stylesheet");
-		loginStyle.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.4.0/src/login.css";
+		loginStyle.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.41/src/login.css";
 		loginStyle.id = "material-dynmap-login-style";
 		global.document.head.append(loginStyle);
 	} else {
 		const style = global.document.createElement("link");
 		style.setAttribute("rel", "stylesheet");
-		style.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.4.0/src/main.css";
+		style.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.41/src/main.css";
 		style.id = "material-dynmap-style";
 		style.media = "not all";
 		global.document.head.append(style);
 
 		const script = document.createElement("script");
 		script.setAttribute("type", "text/javascript");
-		script.src = "https://cdn.jsdelivr.net/npm/material-dynmap@0.4.0/src/app.js";
+		script.src = "https://cdn.jsdelivr.net/npm/material-dynmap@0.41/src/app.js";
 		script.id = "material-dynmap-script";
 		global.document.head.appendChild(script);
 	}
 
 	global.document.head
 		.querySelector("link[rel='icon']")
-		.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.4.0/assets/icon.ico";
+		.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.41/assets/icon.ico";
 }));
