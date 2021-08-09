@@ -167,6 +167,7 @@ body {
 	border-radius: 8px;
 	cursor: pointer;
 	overflow: hidden;
+	position: relative;
 	transition: background-color 0.2s;
 }
 
@@ -196,8 +197,8 @@ body {
 	position: relative;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .item.surface:after {
-	border: 5px solid #437c33;
+.dynmap .leaflet-control-container .leaflet-type-container .world .item:after {
+	border: 5px solid #212121;
 	border-radius: 6px;
 	bottom: 2px;
 	box-shadow: 0 0 0 2px #212121;
@@ -211,7 +212,7 @@ body {
 	z-index: 121;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .item.surface:hover:after {
+.dynmap .leaflet-control-container .leaflet-type-container .world .item:hover:after {
 	box-shadow: 0 0 0 2px #000000;
 }
 
