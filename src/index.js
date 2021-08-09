@@ -30,7 +30,7 @@
 		return;
 	}
 
-	if (window.materialDynmap || window.document.getElementbyId("#material-dynmap-script")) {
+	if (window.materialDynmap || window.document.getElementById("#material-dynmap-script")) {
 		return;
 	}
 	window.materialDynmap = true;
