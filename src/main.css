@@ -508,8 +508,8 @@ body {
 	word-wrap: normal;
 }
 
-.dynmap .compass_flat:before {
-	transform: rotateZ(315deg);
+.dynmap .compass_S:before {
+	transform: rotateZ(-45deg);
 }
 
 .dynmap .alertbox {
