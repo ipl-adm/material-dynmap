@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/material-dynmap@0.4.2/src/mdi.css");
+@import url("https://cdn.jsdelivr.net/npm/material-dynmap@0.4.3/src/mdi.css");
 
 :root {
 	font-family: Roboto, Arial, sans-serif;
@@ -234,17 +234,17 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Flat"] {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.2/assets/minimap-flat.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-flat.svg") !important;
 	background-size: cover;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Surface"] {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.2/assets/minimap-surface.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-surface.svg") !important;
 	background-size: cover;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .maptype[title="Topography"] {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.2/assets/minimap-topology.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-topology.svg") !important;
 	background-size: cover;
 }
 
