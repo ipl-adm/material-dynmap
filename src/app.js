@@ -1,3 +1,4 @@
+/* eslint-env browser */
 (function(window, factory) {
 	if (
 		window.dynmap

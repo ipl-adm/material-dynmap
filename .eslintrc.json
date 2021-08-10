@@ -8,9 +8,6 @@
     "node": true
   },
 	"extends": "eslint:recommended",
-  "globals": {
-    "GM_addElement": "readonly"
-  },
   "parserOptions": {
 		"ecmaVersion": 12
 	},
