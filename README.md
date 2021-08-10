@@ -12,7 +12,7 @@
 
 <p align="center"><a href="https://github.com/SNDST00M/material-dynmap/actions/workflows/main.yml" target="_blank"><img src="https://img.shields.io/github/workflow/status/SNDST00M/material-dynmap/Node.js%20CI?style=flat-square&label=Build&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZD0ibTUgMTlhMSAxIDAgMCAwIDEgMWgxMmExIDEgMCAwIDAgMSAtMWMwLS4yMS0uMDctLjQxLS4xOC0uNTdsLTUuODItMTAuMDh2LTQuMzVoLTJ2NC4zNWwtNS44MiAxMC4wOGMtLjExLjE2LS4xOC4zNi0uMTguNTdtMSAzYTMgMyAwIDAgMSAtMyAtM2MwLS42LjE4LTEuMTYuNS0xLjYzbDUuNS05LjU2di0xLjgxYTEgMSAwIDAgMSAtMSAtMXYtMWEyIDIgMCAwIDEgMiAtMmg0YTIgMiAwIDAgMSAyIDJ2MWExIDEgMCAwIDEgLTEgMXYxLjgxbDUuNSA5LjU2Yy4zMi40Ny41IDEuMDMuNSAxLjYzYTMgMyAwIDAgMSAtMyAzaC0xMm03LTZsMS4zNC0xLjM0IDEuOTMgMy4zNGgtOC41NGwyLjY2LTQuNjEgMi42MSAyLjYxbS0uNS00YS41IC41IDAgMCAxIC41IC41IC41IC41IDAgMCAxIC0uNSAuNSAuNSAuNSAwIDAgMSAtLjUgLS41IC41IC41IDAgMCAxIC41IC0uNXoiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4%3D&labelColor=212121&color=0093ed" /></a> <a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Dynmap&message=>=v3.0&logo=curseforge&labelColor=212121&color=0093ed" /></a></p>
 
-<p align="center">A modern, material and focused <a href="https://www.spigotmc.org/resources/dynmap.274/" target="_blank">Webbukit Dynmap</a> theme.</p>
+<p align="center">A modern, material and focused <a href="https://www.spigotmc.org/resources/dynmap.274" target="_blank">Webbukit Dynmap</a> theme.</p>
 
 <p align="center">Designed for fluent and clear navigation with the Material Design language.</p>
 
@@ -38,7 +38,7 @@ To install the script server-side with automatic updates, use the following opti
 
 ### Personal installation
 
-To install the script for personal use on all Dynmap instances, you need to have a userscript manager installed. For a modern seamless UI with an open source extension, [Violentmonkey] is strongly recommended.
+To install the script for personal use on all Dynmap instances, you need to have a userscript manager installed. For a modern seamless UI with an open source extension, [Tampermonkey] is strongly recommended.
 
 Then visit [OpenUserJS][material-dynmap-openuserjs] and click the `Install` button. The userscript will update automatically. Alternatively, this button lets you install it directly:
 
@@ -67,7 +67,7 @@ Here are some of the things you can do to help:
 Copyright © 2021 [SNDST00M](https://github.com/SNDST00M) and [other contributors](https://github.com/SNDST00M/material-dynmap/graphs/contributors).
 
 <!-- Installation -->
-[violentmonkey]: https://violentmonkey.github.io/
+[tampermonkey]: https://www.tampermonkey.net/
 [material-dynmap-openuserjs]: https://openuserjs.org/scripts/SNDST00M/Material_Dynmap
 [nativefier-api]: https://github.com/nativefier/nativefier/blob/master/API.md#command-line
 <!-- Screenshots -->
