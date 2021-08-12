@@ -2,11 +2,15 @@
 
 ## 0.4.3
 
+<a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.4.2/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-08-09&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /> <a href="https://github.com/SNDST00M/material-dynmap/projects/9/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=v0.4.1&logo=trello&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/milestone/9/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=v0.4.3&logo=github&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
 
+- Recommend Tampermonkey instead of Violentmonkey.
+- Fix compass direction in topology view.
+- Remove version locking in Electron script.
 
 ## 0.4.2
 
-<a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.4.1/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-08-09&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
+<a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.4.2/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-08-09&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
 
 Fix nonexistent asset tags for version 0.4.1.
 
