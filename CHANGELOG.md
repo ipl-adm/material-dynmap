@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.3
+
+
+
 ## 0.4.2
 
 <a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.4.1/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-08-09&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
