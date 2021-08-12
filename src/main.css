@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/material-dynmap@0.4.3/src/mdi.css");
+@import url("https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/src/mdi.css");
 
 :root {
 	font-family: Roboto, Arial, sans-serif;
@@ -235,43 +235,43 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item .maptype {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-flat.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.5.0/assets/minimap-flat.svg") !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item[class*="south"]:not(.south) .maptype,
 .dynmap .leaflet-control-container .leaflet-type-container .world .item[class*="Surface"] .maptype {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-surface.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.5.0/assets/minimap-surface.svg") !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .topo .maptype {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-topology.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.5.0/assets/minimap-topology.svg") !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container.the_nether .world .item .maptype {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-flat-nether.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.5.0/assets/minimap-flat-nether.svg") !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container.the_nether .world .nether .maptype {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-surface-nether.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.5.0/assets/minimap-surface-nether.svg") !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container.the_nether .world .NetherRoof .maptype {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-topology-nether.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.5.0/assets/minimap-topology-nether.svg") !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container.the_end .world .item .maptype {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-flat-end.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.5.0/assets/minimap-flat-end.svg") !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container.the_end .world .the_end .maptype {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-surface-end.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.5.0/assets/minimap-surface-end.svg") !important;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container.the_end .world .item[class*="End"][class*="Roof"] .maptype,
 .dynmap .leaflet-control-container .leaflet-type-container.the_end .world .item[class*="End"][class*="Topo"] .maptype,
 .dynmap .leaflet-control-container .leaflet-type-container.the_end .world .item[class*="the_end"][class*="_roof"] .maptype,
 .dynmap .leaflet-control-container .leaflet-type-container.the_end .world .item[class*="the_end"][class*="_topo"] .maptype {
-	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.4.3/assets/minimap-topology-end.svg") !important;
+	background-image: url("https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.5.0/assets/minimap-topology-end.svg") !important;
 }
 
 .dynmap .leaflet-control-container .dynmap-link .dynmap-link-button {
