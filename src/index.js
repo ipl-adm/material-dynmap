@@ -68,7 +68,7 @@
 
 		const script = document.createElement("script");
 		script.setAttribute("type", "text/javascript");
-		script.id = "material-dynmap-script";
+		script.id = "material-dynmap-app";
 		script.src = "https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/src/app.js";
 		window.document.head.appendChild(script);
 	}
