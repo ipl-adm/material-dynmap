@@ -40,7 +40,13 @@
 			window.dynmap.sidebar.get(0).classList.add("pinned");
 		}
 
-		if (!window.dynmap.options.components.filter(c => c.type === "timeofdayclock")[0].showdigitalclock) {
+		const worldlist = window.dynmap.worldlist;
+		if (worldlist.get(0) && worldlist.get(0).parentElement) {
+			worldlist.get(0).parentElement.setAttribute("style", "display: none;");
+		}
+
+		const timeofdayclock = window.dynmap.options.components.find(c => c.type === "timeofdayclock");
+		if (timeofdayclock && !timeofdayclock.showdigitalclock) {
 			const clockObserver = new MutationObserver(hideEmptyClock);
 			hideEmptyClock();
 			clockObserver.observe(window.dynmap.options.container.get(0), {
