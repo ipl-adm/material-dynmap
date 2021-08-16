@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/src/mdi.css");
+@import url("https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/mdi.css");
 
 :root {
 	font-family: Roboto, Arial, sans-serif;
@@ -191,10 +191,6 @@ body {
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item:nth-child(n+2) {
 	margin: 0 0 0 10px;
-}
-
-.dynmap .leaflet-control-container .leaflet-type-container .world .item.surface {
-	position: relative;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item:after {
@@ -541,14 +537,20 @@ body {
 .dynmap .alertbox {
 	background-color: #e53935;
 	border-radius: 4px;
-	bottom: 52px;
-	box-shadow: 0 2px 4px #2121214d;
+	box-shadow: 0 0 0 16384px #000000bf;
+	box-sizing: border-box;
 	color: #ffffff;
+	height: 50px;
 	left: initial;
-	margin: 0;
-	right: 10px;
-	top: initial;
-	width: auto;
+	line-height: 34px;
+	margin: auto;
+	overflow: visible;
+	pointer-events: none;
+	right: calc(50% - 150px);
+	top: calc(50% - 25px);
+	user-select: none;
+	width: 300px;
+	z-index: 123;
 }
 
 .dynmap .chat {
@@ -572,6 +574,7 @@ body {
 	top: 102px;
 	transform: scale(68%);
 	transform-origin: top right;
+	user-select: none;
 	width: auto;
 }
 

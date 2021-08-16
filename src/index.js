@@ -47,7 +47,7 @@
 	if (login) {
 		const loginStyle = window.document.createElement("link");
 		loginStyle.setAttribute("rel", "stylesheet");
-		loginStyle.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/src/login.css";
+		loginStyle.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/login.css";
 		loginStyle.id = "material-dynmap-login-style";
 		loginStyle.addEventListener("load", function() {
 			const materialDynmapLoaded = new CustomEvent("material-dynmap.load", {
@@ -61,19 +61,19 @@
 	} else {
 		const style = window.document.createElement("link");
 		style.setAttribute("rel", "stylesheet");
-		style.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/src/main.css";
+		style.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/main.css";
 		style.id = "material-dynmap-style";
 		style.media = "not all";
 		window.document.head.append(style);
 
 		const script = document.createElement("script");
 		script.setAttribute("type", "text/javascript");
-		script.id = "material-dynmap-script";
-		script.src = "https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/src/app.js";
+		script.id = "material-dynmap-app";
+		script.src = "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/app.js";
 		window.document.head.appendChild(script);
 	}
 
 	window.document.head
 		.querySelector("link[rel='icon']")
-		.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/assets/icon.ico";
+		.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/assets/icon.ico";
 }));
