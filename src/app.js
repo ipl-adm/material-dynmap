@@ -119,9 +119,11 @@
 
 	function renderTypeLayers(types) {
 		const world = window.dynmap.world;
+		const worldlist = world.element.get(0).cloneNode(true);
 		types.setAttribute("class", `leaflet-type-container ${world.title}`);
 		types.textContent = "";
-		types.appendChild(world.element.get(0).cloneNode(true));
+		worldlist.removeAttribute("style");
+		types.appendChild(worldlist);
 		types.querySelectorAll(".item").forEach(function(el) {
 			const typeName = Object.keys(world.maps)
 				.filter(name => el.childNodes[0].title === world.maps[name].options.title)[0];
