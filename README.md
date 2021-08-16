@@ -38,7 +38,7 @@ To install the script server-side with automatic updates, use the following opti
 
 ### Personal installation
 
-To install the script for personal use on all Dynmap instances, you need to have a userscript manager installed. For a modern seamless UI with an open source extension, [Tampermonkey] is strongly recommended.
+To install the script for personal use on all Dynmap instances, you need to have a userscript manager installed. For a modern seamless UI with an open source extension, [Violentmonkey] is strongly recommended.
 
 Then visit [OpenUserJS][material-dynmap-openuserjs] and click the `Install` button. The userscript will update automatically. Alternatively, this button lets you install it directly:
 
@@ -67,7 +67,7 @@ Here are some of the things you can do to help:
 Copyright © 2021 [SNDST00M](https://github.com/SNDST00M) and [other contributors](https://github.com/SNDST00M/material-dynmap/graphs/contributors).
 
 <!-- Installation -->
-[tampermonkey]: https://www.tampermonkey.net/
+[violentmonkey]: https://violentmonkey.github.io/
 [material-dynmap-openuserjs]: https://openuserjs.org/scripts/SNDST00M/Material_Dynmap
 [nativefier-api]: https://github.com/nativefier/nativefier/blob/master/API.md#command-line
 <!-- Screenshots -->
