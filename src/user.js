@@ -7,10 +7,10 @@
 // @description     Material styling for Bukkit's dynmap Minecraft plugin.
 // @author          2021, SNDST00M (https://github.com/SNDST00M/)
 // @license	        MIT
-// @homepage        https://github.com/SNDST00M/material-dynmap/blob/v0.6.0/README.md
-// @icon            https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.6.0/assets/icon.png
-// @updateURL       https://raw.githubusercontent.com/SNDST00M/material-dynmap/main/src/user.js
-// @downloadURL     https://raw.githubusercontent.com/SNDST00M/material-dynmap/main/src/user.js
+// @homepage        https://github.com/SNDST00M/material-dynmap/blob/v0.5.0/README.md
+// @icon            https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.5.0/assets/icon.png
+// @updateURL       https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap/src/user.js
+// @downloadURL     https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap/src/user.js
 // @include         *://*/*
 // @exclude         *://*.google.*
 // @exclude         *://*.youtube.*
