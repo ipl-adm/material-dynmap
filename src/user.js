@@ -3,12 +3,12 @@
 /* global GM_addElement */
 // ==UserScript==
 // @name            Material Dynmap
-// @version         0.5.0
+// @version         0.6.0
 // @description     Material styling for Bukkit's dynmap Minecraft plugin.
 // @author          2021, SNDST00M (https://github.com/SNDST00M/)
 // @license	        MIT
-// @homepage        https://github.com/SNDST00M/material-dynmap/blob/v0.5.0/README.md
-// @icon            https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.5.0/assets/icon.png
+// @homepage        https://github.com/SNDST00M/material-dynmap/blob/v0.6.0/README.md
+// @icon            https://raw.githubusercontent.com/SNDST00M/material-dynmap/v0.6.0/assets/icon.png
 // @updateURL       https://raw.githubusercontent.com/SNDST00M/material-dynmap/main/src/user.js
 // @downloadURL     https://raw.githubusercontent.com/SNDST00M/material-dynmap/main/src/user.js
 // @include         *://*/*
@@ -126,7 +126,7 @@
 
 	if (login) {
 		const loginStyle = GM_addElement("link", {
-			href: "https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/src/login.css",
+			href: "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/login.css",
 			rel: "stylesheet"
 		});
 		loginStyle.id = "material-dynmap-login-style";
@@ -137,14 +137,14 @@
 		window.document.dispatchEvent(materialDynmapLoaded);
 	} else {
 		const style = GM_addElement("link", {
-			href: "https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/src/main.css",
+			href: "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/main.css",
 			media: "not all",
 			rel: "stylesheet"
 		});
 		style.id = "material-dynmap-style";
 
 		const script = GM_addElement("script", {
-			src: "https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/src/app.js",
+			src: "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/app.js",
 			type: "text/javascript"
 		});
 		script.id = "material-dynmap-app";
@@ -152,5 +152,5 @@
 
 	window.document.head
 		.querySelector("link[rel='icon']")
-		.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.5.0/assets/icon.ico";
+		.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/assets/icon.ico";
 }));
