@@ -15,7 +15,7 @@
 - [`login.css`][material-dynmap-src-login-css] - stylesheet for material design in login page
 - [`mdi.css`][material-dynmap-src-mdi-css] - Material Design Icons font, locked to `5.9.55`.
 
-## Ins	llation
+## Instllation
 
 See the [installation section of `README.md`][material-dynmap-readme].
 
