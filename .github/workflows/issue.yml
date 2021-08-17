@@ -7,14 +7,16 @@ on:
     types: [opened, closed]
 
 jobs:
-  runs-on: ubuntu-latest
-    - name: Label open issue
-      if: "github.event.action == 'opened'"
-      uses: andymckay/labeler@master
-      with:
-        add-labels: "status-tracking"
-    - name: Label closed issue
-      if: "github.event.action == 'closed'"
-      uses: andymckay/labeler@master
-      with:
-        remove-labels: "status-tracking"
+  automate-issues-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label open issue
+        if: "github.event.action == 'opened'"
+        uses: andymckay/labeler@master
+        with:
+          add-labels: "status-tracking"
+      - name: Label closed issue
+        if: "github.event.action == 'closed'"
+        uses: andymckay/labeler@master
+        with:
+          remove-labels: "status-tracking"
