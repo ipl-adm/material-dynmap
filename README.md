@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://github.com/SNDST00M/material-dynmap">
-    <img alt="logo" title="material-dynmap" src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.5.0/assets/icon.svg" width="100" alt="Logo">
+    <img alt="logo" title="material-dynmap" src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.6.1/assets/icon.svg" width="100" alt="Logo">
   </a>
   <h1 align="center"><code>material-dynmap</code></h1>
-  <h4 align="center">Material theming userscript for Webbukit's Dynmap plugin.</h4>
+  <h4 align="center">Material theming script for Webbukit's Dynmap plugin.</h4>
 </p>
 
 <p align="center">
@@ -18,11 +18,15 @@
 
 ## Screenshots
 
-<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.5.0/assets/westeroscraft-surface.png"/></a></p>
+<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.6.1/assets/westeroscraft-map.png"/></a></p>
 
 > The Red Keep in King's Landing on the [WesterosCraft Minecraft server][westeroscraft].
 
-<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.5.0/assets/earthmc-login.png"/></a></p>
+<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.6.1/assets/ardacraft-map.png"/></a></p>
+
+> The Seven Towers in Isengard on the [ArdaCraft Minecraft server][ardacraft].
+
+<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.6.1/assets/earthmc-login.png"/></a></p>
 
 > The Dynmap login page on the [EarthMC Minecraft server][earthmc].
 
@@ -71,7 +75,8 @@ Copyright © 2021 [SNDST00M](https://github.com/SNDST00M) and [other contributor
 [material-dynmap-openuserjs]: https://openuserjs.org/scripts/SNDST00M/Material_Dynmap
 [nativefier-api]: https://github.com/nativefier/nativefier/blob/master/API.md#command-line
 <!-- Screenshots -->
-[westeroscraft]:https://westeroscraft.com/launcher
+[westeroscraft]: https://westeroscraft.com/launcher
+[ardacraft]: https://ardacraft.me/
 [earthmc]: https://earthmc.net/
 <!-- Contributing -->
 [material-dynmap-issue]: https://github.com/millsp/material-candy/issues/new/choose/
