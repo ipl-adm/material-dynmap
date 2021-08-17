@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 /* eslint-env browser, greasemonkey */
-/* global GM_addElement */
 // ==UserScript==
 // @name            Material Dynmap
 // @version         0.6.0
@@ -77,7 +76,7 @@
 // @exclude         *://*.weibo.*
 // @exclude         *://*.sina.*
 // @exclude         *://*.xinhuanet.*
-// @grant           GM_addElement
+// @grant           none
 // ==/UserScript==
 (function(window, factory) {
 	if (![...window.document.body.children].filter(isDynmapContainer).length) {
@@ -105,7 +104,7 @@
 	function isDynmapContainer(e) {
 		return e.tagName.toLowerCase() === "div" && (e.id === "mcmap" || e.className === "dynmaplogin");
 	}
-}(this.unsafeWindow, function(window, login) {
+}(window, function(window, login) {
 	if (!window.DynMap && !login) {
 		return;
 	}
@@ -125,29 +124,31 @@
 	}
 
 	if (login) {
-		const loginStyle = GM_addElement("link", {
-			href: "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/login.css",
-			rel: "stylesheet"
-		});
+		const loginStyle = window.document.createElement("link");
+		loginStyle.setAttribute("rel", "stylesheet");
+		loginStyle.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/login.css";
 		loginStyle.id = "material-dynmap-login-style";
-		const materialDynmapLoaded = new CustomEvent("material-dynmap.load", {
-			bubbles: true,
-			detail: { login: true }
+		loginStyle.addEventListener("load", function() {
+			const materialDynmapLoaded = new CustomEvent("material-dynmap.load", {
+				bubbles: true,
+				detail: { login: true }
+			});
+			window.document.dispatchEvent(materialDynmapLoaded);
 		});
-		window.document.dispatchEvent(materialDynmapLoaded);
+		window.document.head.append(loginStyle);
+		return;
 	} else {
-		const style = GM_addElement("link", {
-			href: "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/main.css",
-			media: "not all",
-			rel: "stylesheet"
-		});
+		const style = window.document.createElement("link");
+		style.setAttribute("rel", "stylesheet");
+		style.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/main.css";
 		style.id = "material-dynmap-style";
+		window.document.head.append(style);
 
-		const script = GM_addElement("script", {
-			src: "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/app.js",
-			type: "text/javascript"
-		});
+		const script = document.createElement("script");
+		script.setAttribute("type", "text/javascript");
 		script.id = "material-dynmap-app";
+		script.src = "https://cdn.jsdelivr.net/npm/material-dynmap@0.6.0/src/app.js";
+		window.document.head.appendChild(script);
 	}
 
 	window.document.head
