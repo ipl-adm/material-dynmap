@@ -34,7 +34,6 @@
 			window.clearInterval(window.materialDynmapHandle);
 			delete window.materialDynmapHandle;
 		}
-		window.document.getElementById("material-dynmap-style").removeAttribute("media");
 
 		if (!window.dynmap.sidebar.get(0).classList.contains("pinned")) {
 			window.dynmap.sidebar.get(0).classList.add("pinned");
