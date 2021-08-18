@@ -20,14 +20,14 @@
 See the [installation section of `README.md`][material-dynmap-readme].
 
 <!-- Scripts -->
-[material-dynmap-src-app-js]: https://github.com/SNDST00M/material-dynmap/blob/v0.6.1/src/app.js
-[material-dynmap-src-index-js]: https://github.com/SNDST00M/material-dynmap/blob/v0.6.1/src/index.js
-[material-dynmap-src-user-js]: https://github.com/SNDST00M/material-dynmap/blob/v0.6.1/src/user.js
-[material-dynmap-src-electron-js]: https://github.com/SNDST00M/material-dynmap/blob/v0.6.1/src/electron.js
+[material-dynmap-src-app-js]: https://github.com/SNDST00M/material-dynmap/blob/v0.7.0/src/app.js
+[material-dynmap-src-index-js]: https://github.com/SNDST00M/material-dynmap/blob/v0.7.0/src/index.js
+[material-dynmap-src-user-js]: https://github.com/SNDST00M/material-dynmap/blob/v0.7.0/src/user.js
+[material-dynmap-src-electron-js]: https://github.com/SNDST00M/material-dynmap/blob/v0.7.0/src/electron.js
 <!-- Stylesheets -->
-[material-dynmap-src-main-css]: https://github.com/SNDST00M/material-dynmap/blob/v0.6.1/src/main.css
-[material-dynmap-src-login-css]: https://github.com/SNDST00M/material-dynmap/blob/v0.6.1/src/login.css
-[material-dynmap-src-mdi-css]: https://github.com/SNDST00M/material-dynmap/blob/v0.6.1/src/mdi.css
+[material-dynmap-src-main-css]: https://github.com/SNDST00M/material-dynmap/blob/v0.7.0/src/main.css
+[material-dynmap-src-login-css]: https://github.com/SNDST00M/material-dynmap/blob/v0.7.0/src/login.css
+[material-dynmap-src-mdi-css]: https://github.com/SNDST00M/material-dynmap/blob/v0.7.0/src/mdi.css
 [templarian-mdi]: https://materialdesignicons.com
 <!-- Installation -->
-[material-dynmap-readme]: https://github.com/SNDST00M/material-dynmap/blob/v0.6.1/README.md#installation
+[material-dynmap-readme]: https://github.com/SNDST00M/material-dynmap/blob/v0.7.0/README.md#installation

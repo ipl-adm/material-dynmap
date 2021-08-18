@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/SNDST00M/material-dynmap">
-    <img alt="logo" title="material-dynmap" src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.6.1/assets/icon.svg" width="100" alt="Logo">
+    <img alt="logo" title="material-dynmap" src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.7.0/assets/icon.svg" width="100" alt="Logo">
   </a>
   <h1 align="center"><code>material-dynmap</code></h1>
   <h4 align="center">Material theming script for Webbukit's Dynmap plugin.</h4>
@@ -18,15 +18,15 @@
 
 ## Screenshots
 
-<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.6.1/assets/westeroscraft-map.png"/></a></p>
+<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.7.0/assets/westeroscraft-map.png"/></a></p>
 
 > The Red Keep in King's Landing on the [WesterosCraft Minecraft server][westeroscraft].
 
-<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.6.1/assets/ardacraft-map.png"/></a></p>
+<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.7.0/assets/ardacraft-map.png"/></a></p>
 
 > The Seven Towers in Isengard on the [ArdaCraft Minecraft server][ardacraft].
 
-<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.6.1/assets/earthmc-login.png"/></a></p>
+<p align="center"><a href="https://openuserjs.org/scripts/SNDST00M/Material_Dynmap" target="_blank"><img src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.7.0/assets/earthmc-login.png"/></a></p>
 
 > The Dynmap login page on the [EarthMC Minecraft server][earthmc].
 
