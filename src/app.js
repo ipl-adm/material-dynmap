@@ -35,7 +35,9 @@
 			delete window.materialDynmapHandle;
 		}
 
-		if (!window.dynmap.sidebar.get(0).classList.contains("pinned")) {
+		if (window.screen.width < 640) {
+			window.dynmap.sidebar.get(0).classList.remove("pinned");
+		} else {
 			window.dynmap.sidebar.get(0).classList.add("pinned");
 		}
 
