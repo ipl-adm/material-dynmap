@@ -354,7 +354,7 @@ body {
 	flex-wrap: nowrap;
 	overflow: hidden;
 	position: static;
-	transition: width 0.2s ease-in-out;
+	transition: box-shadow 0.2s ease-in-out, width 0.2s ease-in-out;
 }
 
 .dynmap .sidebar:not(.pinned) {
@@ -733,6 +733,10 @@ body {
 	.dynmap .sidebar {
 		overflow: hidden;
 		width: 0;
+	}
+
+	.dynmap .sidebar.pinned {
+		box-shadow: 0 0 0 16384px #000000bf;
 	}
 
 	.dynmap .leaflet-control-container .leaflet-type-container .world {
