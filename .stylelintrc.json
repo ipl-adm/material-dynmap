@@ -12,6 +12,7 @@
     "color-hex-case": "lower",
     "color-hex-length": "long",
     "comment-empty-line-before": null,
+    "font-family-no-missing-generic-family-keyword": null,
     "indentation": "tab",
     "order/properties-alphabetical-order": true,
     "selector-pseudo-element-colon-notation": "single",

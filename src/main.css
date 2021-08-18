@@ -19,7 +19,7 @@ body {
 
 .dynmap .leaflet-control-container .leaflet-bar {
 	border: none;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 
 .dynmap .leaflet-control-container .leaflet-control-layers {
@@ -148,13 +148,13 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world {
-	bottom: 20px;
+	bottom: 10px;
 	float: left;
 	font-size: 0;
-	height: 75px;
-	left: 288px;
-	padding: 2px;
-	position: fixed;
+	height: 79px;
+	left: 10px;
+	overflow: hidden;
+	position: absolute;
 	z-index: 121;
 }
 
@@ -190,7 +190,7 @@ body {
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item:nth-child(n+2) {
-	margin: 0 0 0 10px;
+	margin: 0 0 0 8px;
 }
 
 .dynmap .leaflet-control-container .leaflet-type-container .world .item:after {
@@ -297,6 +297,14 @@ body {
 	word-wrap: normal;
 }
 
+.dynmap .leaflet-control-container .leaflet-control-zoom .leaflet-control-zoom-in {
+	border-radius: 5px 5px 0 0;
+}
+
+.dynmap .leaflet-control-container .leaflet-control-zoom .leaflet-control-zoom-out {
+	border-radius: 0 0 5px 5px;
+}
+
 .dynmap .leaflet-control-container .leaflet-control-zoom a,
 .dynmap .leaflet-control-container .dynmap-link .dynmap-link-button {
 	width: 32px;
@@ -344,9 +352,64 @@ body {
 	flex-grow: 0;
 	flex-shrink: 0;
 	flex-wrap: nowrap;
+	overflow: hidden;
 	position: static;
 	transition: width 0.2s ease-in-out;
+}
+
+.dynmap .sidebar:not(.pinned) {
+	width: 0;
+}
+
+.dynmap .sidebar.pinned {
 	width: 270px;
+}
+
+.dynmap .sidebar .panel > .pin,
+.dynmap .sidebar.pinned .panel > .pin,
+.dynmap .sidebar .panel > .pin:hover,
+.dynmap .sidebar.pinned .panel > .pin:hover {
+	background-image: none;
+}
+
+.dynmap .sidebar .panel > .pin {
+	align-items: center;
+	background-color: #212121;
+	border: none;
+	border-radius: 5px;
+	bottom: 52px;
+	color: #e0e0e0;
+	display: flex;
+	font-size: 0;
+	height: 32px;
+	justify-content: flex-start;
+	left: initial;
+	padding: 0;
+	position: absolute;
+	right: 10px;
+	text-decoration: none;
+	top: initial;
+	width: 32px;
+}
+
+.dynmap .sidebar .panel > .pin:before,
+.dynmap .sidebar.pinned .panel > .pin:before {
+	content: '\F000E';
+	direction: ltr;
+	display: inline-flex;
+	font-family: "Material Design Icons", sans-serif;
+	font-size: 72px;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: 16px;
+	letter-spacing: normal;
+	line-height: 1em;
+	margin: 0 8px;
+	text-transform: none;
+	white-space: nowrap;
+	width: 16px;
+	word-wrap: normal;
 }
 
 .dynmap .sidebar legend {
@@ -385,7 +448,6 @@ body {
 }
 
 .dynmap .sidebar .panel .hitbar,
-.dynmap .sidebar .panel .pin,
 .dynmap .sidebar .panel .slider {
 	display: none;
 }
@@ -423,7 +485,7 @@ body {
 .dynmap .leaflet-container .coord-control {
 	background-color: #212121;
 	border: none;
-	border-radius: 10px;
+	border-radius: 5px;
 	color: #e0e0e0;
 	padding: 5px 10px;
 	width: auto;
@@ -562,7 +624,7 @@ body {
 	align-items: center;
 	background-color: #212121;
 	border: none;
-	border-radius: 10px;
+	border-radius: 5px;
 	color: #e0e0e0;
 	display: flex;
 	flex-direction: column;
