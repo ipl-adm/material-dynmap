@@ -1,4 +1,10 @@
 {
 	"editor.detectIndentation": true,
-  "editor.tabSize": 4
+  "editor.tabSize": 4,
+  "[css]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
