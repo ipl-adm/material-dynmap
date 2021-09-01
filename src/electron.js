@@ -64,7 +64,6 @@
 		style.setAttribute("rel", "stylesheet");
 		style.href = "https://cdn.jsdelivr.net/npm/material-dynmap/src/main.css";
 		style.id = "material-dynmap-style";
-		style.media = "not all";
 		global.document.head.append(style);
 
 		const script = document.createElement("script");
