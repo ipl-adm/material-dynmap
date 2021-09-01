@@ -34,11 +34,19 @@
 
 ### Server-side installation
 
-To install the script server-side with automatic updates, use the following options in your Dynmap location context:
-```conf
-        sub_filter '</head>' '<script src="https://cdn.jsdelivr.net/npm/material-dynmap/src/index.js" type="text/javascript" id="material-dynmap-script" defer></script></head>';
-        sub_filter_last_modified on;
-```
+To install the script server-side with automatic updates, there are two installaion methods:
+
+1. Drop the JAR plugin into your plugins folder:
+   - Bukkit: https://dev.bukkit.org/projects/materialdynmap
+   - Spigot: https://www.spigotmc.org/resources/materialdynmap.95898
+   - Forge/Fabric: https://www.curseforge.com/minecraft/bukkit-plugins/materialdynmap-forge-fabric
+
+2. Use the following options in the Dynmap server location context in your Nginx configuration:
+
+   ```conf
+       sub_filter '</head>' '<script src="https://cdn.jsdelivr.net/npm/material-dynmap/src/index.js" type="text/javascript" id="material-dynmap-script" defer></script></head>';
+       sub_filter_last_modified on;
+    ```
 
 ### Personal installation
 

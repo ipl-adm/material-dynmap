@@ -1,0 +1,5 @@
+name: MaterialDynmap
+main: io.github.sndst00m.MaterialDynmapMain
+version: "${project.version}"
+author: SNDST00M
+depend: [ dynmap ]
