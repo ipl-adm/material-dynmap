@@ -1,8 +1,8 @@
 colordaysUntilStale: 60
 colordaysUntilClose: 7
 colorexemptLabels:
-  - pinned #todo
-  - security
+  - state-pinned
+  - scope-security
 colorstaleLabel: wontfix
 colormarkComment: >
   This issue has been automatically marked as stale because it has not had

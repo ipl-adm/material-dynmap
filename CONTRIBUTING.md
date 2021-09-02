@@ -1,6 +1,6 @@
 # Contributing
 
-<img align="right" src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.7.0/assets/icon.svg" width="96px">
+<img align="right" src="https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.0/assets/icon.svg" width="96px">
 This userscript follows a weekly release schedule every Thursday prior to 12:00AM UTC. This ensures that users will not be spammed with updates from OpenUserJS and their Tampermonkey/Greasemonkey extension.
 
 Here are a few ways you can contribute to this repository:

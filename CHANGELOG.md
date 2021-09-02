@@ -1,6 +1,13 @@
 # Changelog
 
-# 0.7.0
+## 0.8.0
+
+<a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.8.0/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-09-02&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /> <a href="https://github.com/SNDST00M/material-dynmap/projects/14/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=v0.8.0&logo=trello&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/milestone/14/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=v0.8.0&logo=github&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
+
+- Add JAR for easy server-side installation.
+- Fix styling injection in Electron preload script.
+
+## 0.7.0
 
 <a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.7.0/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-08-18&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /> <a href="https://github.com/SNDST00M/material-dynmap/projects/13/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=v0.7.0&logo=trello&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/milestone/13/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=v0.7.0&logo=github&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
 
@@ -8,7 +15,7 @@
 - Post-boot minimising the player list in mobile/narrow resolutions.
 - Add empty directory for Vercel app (CI dynmap server).
 
-# 0.6.1
+## 0.6.1
 
 <a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.6.1/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-08-17&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /> <a href="https://github.com/SNDST00M/material-dynmap/projects/12/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=v0.6.1&logo=trello&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/milestone/12/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=v0.6.1&logo=github&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
 
@@ -17,7 +24,8 @@
 - Fix post-load material stylesheet FOUC
 - Automate tracking status label for convenience.
 - Enable CI actions on release candidate pulls.
-# 0.6.0
+
+## 0.6.0
 
 <a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.6.0/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-08-16&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /> <a href="https://github.com/SNDST00M/material-dynmap/projects/11/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=v0.6.0&logo=trello&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/milestone/10/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=v0.6.0&logo=github&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
 

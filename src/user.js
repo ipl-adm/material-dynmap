@@ -2,12 +2,12 @@
 /* eslint-env browser, greasemonkey */
 // ==UserScript==
 // @name            Material Dynmap
-// @version         0.7.0
+// @version         0.8.0
 // @description     Material styling for Bukkit's dynmap Minecraft plugin.
 // @author          2021, SNDST00M (https://github.com/SNDST00M/)
 // @license	        MIT
-// @homepage        https://github.com/SNDST00M/material-dynmap/blob/v0.7.0/README.md
-// @icon            https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.7.0/assets/icon.png
+// @homepage        https://github.com/SNDST00M/material-dynmap/blob/v0.8.0/README.md
+// @icon            https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.0/assets/icon.png
 // @updateURL       https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap/src/user.js
 // @downloadURL     https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap/src/user.js
 // @include         *://*/*
@@ -126,7 +126,7 @@
 	if (login) {
 		const loginStyle = window.document.createElement("link");
 		loginStyle.setAttribute("rel", "stylesheet");
-		loginStyle.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.7.0/src/login.css";
+		loginStyle.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.8.0/src/login.css";
 		loginStyle.id = "material-dynmap-login-style";
 		loginStyle.addEventListener("load", function() {
 			const materialDynmapLoaded = new CustomEvent("material-dynmap.load", {
@@ -140,18 +140,18 @@
 	} else {
 		const style = window.document.createElement("link");
 		style.setAttribute("rel", "stylesheet");
-		style.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.7.0/src/main.css";
+		style.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.8.0/src/main.css";
 		style.id = "material-dynmap-style";
 		window.document.head.append(style);
 
 		const script = document.createElement("script");
 		script.setAttribute("type", "text/javascript");
 		script.id = "material-dynmap-app";
-		script.src = "https://cdn.jsdelivr.net/npm/material-dynmap@0.7.0/src/app.js";
+		script.src = "https://cdn.jsdelivr.net/npm/material-dynmap@0.8.0/src/app.js";
 		window.document.head.appendChild(script);
 	}
 
 	window.document.head
 		.querySelector("link[rel='icon']")
-		.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.7.0/assets/icon.ico";
+		.href = "https://cdn.jsdelivr.net/npm/material-dynmap@0.8.0/assets/icon.ico";
 }));
