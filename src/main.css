@@ -510,16 +510,6 @@ body {
 	border: none;
 }
 
-.dynmap .leaflet-container .leaflet-map-pane {
-	zoom: calc(1 / var(--material-dynmap-device-pixel-ratio, 1));
-}
-
-.dynmap .leaflet-container .leaflet-map-pane .Marker.mapMarker > *,
-.dynmap .leaflet-container .leaflet-map-pane .Marker.playerMarker > *,
-.dynmap .leaflet-container .leaflet-popup-pane > .leaflet-popup {
-	zoom: var(--material-dynmap-device-pixel-ratio, 1);
-}
-
 .dynmap .leaflet-tile-pane .leaflet-tile {
 	filter: brightness(1.25) contrast(1.05) hue-rotate(5deg) saturate(1.1);
 	image-rendering: pixelated;
