@@ -1,13 +1,14 @@
 .editorconfig
-.electron
 .eslintignore
 .eslintrc.json
 .gitignore
 .prettierrc.json
 .stylelintrc.json
+CODE_OF_CONDUCT.md
+.electron/**
 .github/**
 .vscode/**
 assets/*.png
 assets/*.svg
-CODE_OF_CONDUCT.md
 node_modules/**
+java/**
