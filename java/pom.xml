@@ -11,7 +11,7 @@
 				<includes>
 					<include>*.yml</include>
 					<include>*.txt</include>
-					<include>*.soy</include>
+					<include>*.html</include>
 				</includes>
 			</resource>
 			<resource>
@@ -20,7 +20,7 @@
 				<excludes>
 					<exclude>*.yml</exclude>
 					<exclude>*.txt</exclude>
-					<exclude>*.soy</exclude>
+					<exclude>*.html</exclude>
 				</excludes>
 			</resource>
 		</resources>
@@ -51,16 +51,6 @@
 		</repository>
 	</repositories>
 	<dependencies>
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>17.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.template</groupId>
-			<artifactId>soy</artifactId>
-			<version>2021-02-01</version>
-		</dependency>
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
