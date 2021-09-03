@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.1
+
+<a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.8.1/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-09-03&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /> <a href="https://github.com/SNDST00M/material-dynmap/projects/15/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=v0.8.1&logo=trello&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/milestone/15/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=v0.8.1&logo=github&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>
+
+- Fix `java.lang.NoClassDefFoundError` plugin errors.
+- Remove non-Minecraft plugin dependencies in JAR.
+
 ## 0.8.0
 
 <a href="https://dev.bukkit.org/projects/dynmap" target="_blank"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Compatibility&message=>=v3.0&logo=curseforge&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/tree/v0.8.0/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2021-09-02&logo=googlecalendar&logoColor=ffffff&labelColor=212121&color=0093ed" /> <a href="https://github.com/SNDST00M/material-dynmap/projects/14/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=v0.8.0&logo=trello&logoColor=ffffff&labelColor=212121&color=0093ed" /></a> <a href="https://github.com/SNDST00M/material-dynmap/milestone/14/"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=v0.8.0&logo=github&logoColor=ffffff&labelColor=212121&color=0093ed" /></a>

@@ -1,7 +1,7 @@
 ---
 name: "🧱 Bug Report"
 about: "Something isn't working well 🚨"
-labels: [context-script, scope-stability, status-tracking, type-bug]
+labels: [scope-stability, status-tracking, type-bug]
 ---
 
 ## 🧱 Bug Report
@@ -33,6 +33,8 @@ labels: [context-script, scope-stability, status-tracking, type-bug]
 #### Additional context
 
 <!-- Add any other context about the problem here (, , ...). -->
+- Server version:
+- Dynmap version:
 - Browser version:
 - Extensions:
 - OS version:

@@ -29,6 +29,7 @@
 - [ ] Tested this in Firefox .
 - [ ] Tested this in Opera .
 - [ ] Tested this in Electron .
+- [ ] Tested this in Bukkit .
 
 #### Anything else worth mentioning?
 
