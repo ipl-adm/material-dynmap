@@ -39,7 +39,6 @@ To install the script server-side with automatic updates, there are two installa
 1. Drop the JAR plugin into your plugins folder:
    - Bukkit: https://dev.bukkit.org/projects/materialdynmap
    - Spigot: https://www.spigotmc.org/resources/materialdynmap.95898
-   - Forge/Fabric: https://www.curseforge.com/minecraft/bukkit-plugins/materialdynmap-forge-fabric
 
 2. Use the following options in the Dynmap server location context in your Nginx configuration:
 
