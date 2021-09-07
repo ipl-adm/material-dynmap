@@ -45,8 +45,8 @@ jobs:
         exclude: CHANGELOG.md|*.yaml|*.svg
     - uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: @v?${{ step.version.output.value }}
-        replace: @staging/${{ steps.short-sha.outputs.sha }}
+        find: "@v?${{ step.version.output.value }}"
+        replace: "@staging/${{ steps.short-sha.outputs.sha }}"
         exclude: CHANGELOG.md|*.json|*.yml|*.svg|java/**
     - uses: jacobtomlinson/gha-find-replace@master
       with:
