@@ -1,4 +1,4 @@
-name: Node.js CI
+name: JavaScript CI
 
 on:
   push:
@@ -27,3 +27,68 @@ jobs:
       run: |
         npm ci
         npm test
+  browserstack-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+    steps:
+    - name: Version bump check
+      run: |
+        echo "::set-env name=COMMIT_MSG::$(git log --format=%B -n 1 ${{ github.sha }})"
+        echo "::set-output name=msg::$(git log --format=%B -n 1 ${{ github.sha }})"
+      id: commit-msg
+  browserstack-test:
+    needs: check
+    if: startsWith( needs.browserstack-check.outputs.msg, 'Bump version to' )
+    steps:
+    - name: Get Short SHA
+      uses: benjlevesque/short-sha@v1.2
+      id: short-sha
+    - name: Get Tag Version
+      uses: WyriHaximus/github-action-get-previous-tag@v1
+      id: version
+    - name: Create Staging Branch
+      uses: peterjgrainger/action-create-branch@v2.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        branch: staging/${{ steps.short-sha.outputs.sha }}
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: staging/${{ steps.short-sha.outputs.sha }}
+    - name: Switch Code Source to Github
+      uses: jacobtomlinson/gha-find-replace@master
+      with:
+        find: /npm/material-dynmap
+        replace: /gh/material-dynmap
+        exclude: CHANGELOG.md|*.yaml|*.svg
+    - name: Switch Code to Staging Version
+      uses: jacobtomlinson/gha-find-replace@master
+      with:
+        find: "@v?${{ step.version.output.value }}"
+        replace: "@staging/${{ steps.short-sha.outputs.sha }}"
+        exclude: CHANGELOG.md|*.json|*.yml|*.svg|java/**
+    - name: Switch Assets to Staging Version
+      uses: jacobtomlinson/gha-find-replace@master
+      with:
+        find: v${{ step.version.output.value }}
+        replace: staging/${{ steps.short-sha.outputs.sha }}
+        exclude: CHANGELOG.md|*.json|*.yml|*.svg|java/**
+    - name: BrowserStack Environment Setup
+      uses: browserstack/github-actions/setup-env@master
+      with:
+        username:  ${{ secrets.BROWSERSTACK_USERNAME }}
+        access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+    - name: BrowserStack Local Tunnel Setup
+      uses: browserstack/github-actions/setup-local@master
+      with:
+        local-testing: start
+        local-identifier: staging/${{ steps.short-sha.outputs.sha }}
+    - name: Run BrowserStack Tests
+      run: node test/node.test.js
+    - name: BrowserStack Local Stop
+      uses: browserstack/github-actions/setup-local@master
+      with:
+        local-testing: stop
