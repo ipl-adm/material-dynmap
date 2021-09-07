@@ -1,20 +1,15 @@
 name: JavaScript CI
-
 on:
   push:
     branches: [ main, release-candidate/* ]
   pull_request:
     branches: [ main, release-candidate/* ]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
-
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -39,6 +34,7 @@ jobs:
         echo "::set-output name=msg::$(git log --format=%B -n 1 ${{ github.sha }})"
       id: commit-msg
   browserstack-test:
+    runs-on: ubuntu-latest
     needs: check
     if: startsWith( needs.browserstack-check.outputs.msg, 'Bump version to' )
     steps:
