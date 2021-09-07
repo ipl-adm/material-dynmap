@@ -34,7 +34,7 @@ jobs:
   browserstack-test:
     runs-on: ubuntu-latest
     needs: commit-message
-    if: startsWith( needs.commit-message.outputs.subject, 'Bump version to' )
+    if: "!startsWith( needs.commit-message.outputs.subject, 'Bump version to' )"
     steps:
     - name: Get Short SHA
       uses: benjlevesque/short-sha@v1.2
