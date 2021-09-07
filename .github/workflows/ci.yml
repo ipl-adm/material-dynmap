@@ -22,21 +22,19 @@ jobs:
       run: |
         npm ci
         npm test
-  browserstack-check:
+  commit-message:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
     steps:
-    - name: Version bump check
-      run: |
-        echo "::set-env name=COMMIT_MSG::$(git log --format=%B -n 1 ${{ github.sha }})"
-        echo "::set-output name=msg::$(git log --format=%B -n 1 ${{ github.sha }})"
-      id: commit-msg
+    - name: Get Commit Message
+      run: echo "::set-output name=subject::$(git log --format=%B -n 1 ${{ github.sha }})"
+      id: log
   browserstack-test:
     runs-on: ubuntu-latest
-    needs: browserstack-check
-    if: startsWith( needs.browserstack-check.outputs.msg, 'Bump version to' )
+    needs: commit-message
+    if: startsWith( needs.commit-message.outputs.subject, 'Bump version to' )
     steps:
     - name: Get Short SHA
       uses: benjlevesque/short-sha@v1.2
