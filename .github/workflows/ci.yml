@@ -18,6 +18,8 @@ jobs:
       with:
         fetch-depth: 0
         ref: ${{ github.head_ref }}
+    - name: Fetch Git Origin
+      run: git fetch origin
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
@@ -39,6 +41,8 @@ jobs:
       with:
         fetch-depth: 0
         ref: ${{ github.head_ref }}
+    - name: Fetch Git Origin
+      run: git fetch origin
     - name: Get Commit Message
       run: echo "::set-output name=subject::$(git log --format=%B -n 1 ${{ github.sha }})"
       id: log
@@ -52,6 +56,8 @@ jobs:
       with:
         fetch-depth: 0
         ref: ${{ github.head_ref }}
+    - name: Fetch Git Origin
+      run: git fetch origin
     - name: Get Short SHA
       uses: benjlevesque/short-sha@v1.2
       id: short-sha
