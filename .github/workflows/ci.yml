@@ -35,7 +35,7 @@ jobs:
       id: commit-msg
   browserstack-test:
     runs-on: ubuntu-latest
-    needs: check
+    needs: browserstack-check
     if: startsWith( needs.browserstack-check.outputs.msg, 'Bump version to' )
     steps:
     - name: Get Short SHA
