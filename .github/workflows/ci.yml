@@ -36,6 +36,8 @@ jobs:
     needs: commit-message
     if: "!startsWith( needs.commit-message.outputs.subject, 'Bump version to' )"
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Get Short SHA
       uses: benjlevesque/short-sha@v1.2
       id: short-sha
@@ -48,7 +50,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         branch: staging/${{ steps.short-sha.outputs.sha }}
-    - name: Checkout
+    - name: Checkout Staging Branch
       uses: actions/checkout@v2
       with:
         ref: staging/${{ steps.short-sha.outputs.sha }}
