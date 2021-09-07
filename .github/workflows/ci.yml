@@ -34,6 +34,11 @@ jobs:
       matrix:
         node-version: [12.x, 14.x, 16.x]
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        ref: ${{ github.head_ref }}
     - name: Get Commit Message
       run: echo "::set-output name=subject::$(git log --format=%B -n 1 ${{ github.sha }})"
       id: log
@@ -42,6 +47,11 @@ jobs:
     needs: commit-message
     if: "!startsWith( needs.commit-message.outputs.subject, 'Bump version to' )"
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        ref: ${{ github.head_ref }}
     - name: Get Short SHA
       uses: benjlevesque/short-sha@v1.2
       id: short-sha
