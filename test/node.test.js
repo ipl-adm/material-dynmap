@@ -1,9 +1,10 @@
-import { remote } from "webdriverio";
-import assert from "assert";
+/* eslint-env node, mocha */
+const { remote } = require("webdriverio");
+const assert = require("assert");
 
-const scriptStagingDomain = `https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1`;
-const userScriptUrl = `${scriptStagingDomain}/src/user.js`
-const electronScriptUrl = `${scriptStagingDomain}/src/electron.js`
+const scriptStagingDomain = "https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1";
+const userScriptUrl = `${scriptStagingDomain}/src/user.js`;
+const electronScriptUrl = `${scriptStagingDomain}/src/electron.js`;
 
 suite("Userscript Tests", async function() {
 	test("./src/user.js", scriptTest.bind({
@@ -17,7 +18,7 @@ suite("Userscript Tests", async function() {
 });
 
 async function scriptTest() {
-	browser = await remote({
+	const browser = await remote({
 		capabilities: {
 			browserName: "chrome",
 			pageloadStrategy: this.loadStrategy
@@ -25,7 +26,13 @@ async function scriptTest() {
 	});
 
 	await browser.url(process.env.CI_ADDRESS);
-	await browser.execute(`await import("${userScriptUrl}");`);
+	await browser.execute(`;(function() {
+		const promise = new Promise();
+		window.document.addEventListener("material-dynmap.load", promise.resolve.bind.promise);
+		setTimeout(promise.reject.bind.promise, 5000);
+		import("${userScriptUrl}");
+		return promise;
+	}())`.replace(/^\t/g, ""));
 
 	const sidebarBackgroundColor = await $(".sidebar").getCSSProperty("background-color");
 	assert.strictEqual(sidebarBackgroundColor, "rgb(33, 33, 33)");
