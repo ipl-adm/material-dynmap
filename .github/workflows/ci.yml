@@ -36,6 +36,8 @@ jobs:
       matrix:
         node-version: [12.x, 14.x, 16.x]
     steps:
+    - name: Install Git
+      run: sudo apt-get update && sudo apt-get install git
     - name: Checkout
       uses: actions/checkout@v2
       with:
@@ -51,6 +53,8 @@ jobs:
     needs: commit-message
     if: "!startsWith( needs.commit-message.outputs.subject, 'Bump version to' )"
     steps:
+    - name: Install Git
+      run: sudo apt-get update && sudo apt-get install git
     - name: Checkout
       uses: actions/checkout@v2
       with:
