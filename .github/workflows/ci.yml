@@ -68,13 +68,6 @@ jobs:
     - name: Get Tag Version
       uses: WyriHaximus/github-action-get-previous-tag@v1
       id: version
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - name: Install NPM Dependencies
-      run: npm ci
     - name: Create Staging Branch
       uses: peterjgrainger/action-create-branch@v2.0.1
       env:
