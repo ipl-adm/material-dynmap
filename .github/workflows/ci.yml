@@ -46,7 +46,7 @@ jobs:
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Get Commit Message
-      run: echo "::set-output name=subject::$(git log --format=%B -n 1 ${{ github.sha }})"
+      run: echo "::set-output name=subject::$(git log --format=%B -n 1 ${{ github.head_ref }})"
       id: log
   browserstack-test:
     runs-on: ubuntu-latest
