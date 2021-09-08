@@ -83,13 +83,13 @@ jobs:
       with:
         find: /npm/material-dynmap
         replace: /gh/material-dynmap
-        exclude: CHANGELOG.md|*.yaml|*.svg
+        exclude: CHANGELOG.md|.*.json|.*.yml|.*.svg|java/.*
     - name: Switch Code to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
         find: "@v?${{ steps.version.output.value }}"
         replace: "@staging/${{ steps.short-sha.outputs.sha }}"
-        exclude: CHANGELOG.md|*.json|*.yml|*.svg|java/**
+        exclude: CHANGELOG.md|.*.json|.*.yml|.*.svg|java/.*
     - name: Switch Assets to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
