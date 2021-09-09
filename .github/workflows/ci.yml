@@ -67,8 +67,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Install NPM Package
-      run: npm ci
     - name: Get Short SHA
       uses: benjlevesque/short-sha@v1.2
       id: short-sha
@@ -114,7 +112,7 @@ jobs:
         local-testing: start
         local-identifier: ${{ steps.short-sha.outputs.sha }}
     - name: Run BrowserStack Tests
-      run: node test/node.test.js
+      run: npm ci && node test/node.test.js
     - name: BrowserStack Local Stop
       uses: browserstack/github-actions/setup-local@master
       with:
