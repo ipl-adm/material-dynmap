@@ -17,7 +17,10 @@ suite("Userscript Tests", async function() {
 	}));
 });
 
-async function scriptTest() {
+/**
+ * @param {Mocha.Done} done
+ */
+async function scriptTest(done) {
 	const browser = await remote({
 		capabilities: {
 			browserName: "chrome",
@@ -40,4 +43,6 @@ async function scriptTest() {
 	assert(chipContainer.isExisting(), "Chip container does not exist!");
 	const typeContainer = await $(".leaflet-type-container");
 	assert(typeContainer.isExisting(), "Type container does not exist!");
+
+	done();
 }
