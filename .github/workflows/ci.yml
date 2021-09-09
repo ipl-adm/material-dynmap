@@ -8,8 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
     steps:
     - name: Install Git
       run: sudo apt-get update && sudo apt-get install git
@@ -20,10 +18,10 @@ jobs:
         ref: ${{ github.head_ref }}
     - name: Fetch Git Origin
       run: git fetch origin
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 16.x
       uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 16.x
         cache: 'npm'
     - name: Run Package Tests
       run: |
@@ -62,10 +60,10 @@ jobs:
         ref: ${{ github.head_ref }}
     - name: Fetch Git Origin
       run: git fetch origin
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 16.x
       uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 16.x
         cache: 'npm'
     - name: Get Short SHA
       uses: benjlevesque/short-sha@v1.2
