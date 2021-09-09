@@ -7,6 +7,7 @@ const userScriptUrl = `${scriptStagingDomain}/src/user.js`;
 const electronScriptUrl = `${scriptStagingDomain}/src/electron.js`;
 
 suite("Userscript Tests", async function() {
+	this.timeout(10000);
 	test("./src/user.js", scriptTest.bind({
 		loadStrategy: "eager",
 		resourceUrl: userScriptUrl
@@ -20,7 +21,7 @@ suite("Userscript Tests", async function() {
 /**
  * @param {Mocha.Done} done
  */
-async function scriptTest(done) {
+async function scriptTest() {
 	const browser = await remote({
 		capabilities: {
 			browserName: "chrome",
@@ -43,6 +44,4 @@ async function scriptTest(done) {
 	assert(chipContainer.isExisting(), "Chip container does not exist!");
 	const typeContainer = await $(".leaflet-type-container");
 	assert(typeContainer.isExisting(), "Type container does not exist!");
-
-	done();
 }
