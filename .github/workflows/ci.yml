@@ -104,7 +104,7 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Automated grep to staging version
-        commit_options: "--no-verify --signoff"
+        commit_options: "--no-verify --signoff --force"
         branch: staging/${{ steps.short-sha.outputs.sha }}
     - name: BrowserStack Environment Setup
       uses: browserstack/github-actions/setup-env@master
