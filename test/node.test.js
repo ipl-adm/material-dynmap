@@ -7,7 +7,7 @@ const userScriptUrl = `${scriptStagingDomain}/src/user.js`;
 const electronScriptUrl = `${scriptStagingDomain}/src/electron.js`;
 
 suite("Userscript Tests", async function() {
-	this.timeout(10000);
+	this.timeout(20000);
 	test("./src/user.js", scriptTest.bind({
 		loadStrategy: "eager",
 		resourceUrl: userScriptUrl
@@ -44,4 +44,6 @@ async function scriptTest() {
 	assert(chipContainer.isExisting(), "Chip container does not exist!");
 	const typeContainer = await $(".leaflet-type-container");
 	assert(typeContainer.isExisting(), "Type container does not exist!");
+
+	return;
 }
