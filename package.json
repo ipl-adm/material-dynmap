@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^9.0.0",
+    "@types/webdriverio": "^5.0.0",
     "@wdio/cli": "^7.11.1",
     "@wdio/mocha-framework": "^7.12.2",
     "chromedriver": "^93.0.1",
