@@ -102,9 +102,9 @@ jobs:
         replace: staging/${{ steps.short-sha.outputs.sha }}
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Automated grep to staging version
-          commit_options: "--no-verify --signoff"
+      with:
+        commit_message: Automated grep to staging version
+        commit_options: "--no-verify --signoff"
     - name: BrowserStack Environment Setup
       uses: browserstack/github-actions/setup-env@master
       with:
