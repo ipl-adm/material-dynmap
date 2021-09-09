@@ -113,7 +113,7 @@ jobs:
     - name: BrowserStack Environment Setup
       uses: browserstack/github-actions/setup-env@master
       with:
-        username:  ${{ secrets.BROWSERSTACK_USERNAME }}
+        username: ${{ secrets.BROWSERSTACK_USERNAME }}
         access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
     - name: BrowserStack Local Tunnel Setup
       uses: browserstack/github-actions/setup-local@master
@@ -130,5 +130,5 @@ jobs:
       uses: dawidd6/action-delete-branch@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branches:  staging/${{ steps.short-sha.outputs.sha }}
-      if: steps.branch.outcome == 'success'
+        branches: staging/${{ steps.short-sha.outputs.sha }}
+      if: always() && steps.branch.outcome == 'success'
