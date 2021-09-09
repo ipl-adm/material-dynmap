@@ -98,13 +98,14 @@ jobs:
     - name: Switch Assets to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: v${{ steps.version.outputs.tag }}
+        find: v?${{ steps.version.outputs.tag }}
         replace: staging/${{ steps.short-sha.outputs.sha }}
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Automated grep to staging version
         commit_options: "--no-verify --signoff"
+        branch: staging/${{ steps.short-sha.outputs.sha }}
     - name: BrowserStack Environment Setup
       uses: browserstack/github-actions/setup-env@master
       with:
