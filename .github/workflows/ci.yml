@@ -79,6 +79,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         branch: staging/${{ steps.short-sha.outputs.sha }}
+      id: branch
     - name: Checkout Staging Branch
       uses: actions/checkout@v2
       with:
@@ -101,6 +102,8 @@ jobs:
         find: v?${{ steps.version.outputs.tag }}
         replace: staging/${{ steps.short-sha.outputs.sha }}
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
+    - name: Integrate Git Pull Merge
+      run: git pull
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Automated grep to staging version
@@ -123,3 +126,9 @@ jobs:
       uses: browserstack/github-actions/setup-local@master
       with:
         local-testing: stop
+    - name: Delete Staging Branch
+      uses: dawidd6/action-delete-branch@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branches:  staging/${{ steps.short-sha.outputs.sha }}
+      if: steps.branch.outcome == 'success'
