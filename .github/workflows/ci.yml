@@ -87,13 +87,13 @@ jobs:
     - name: Switch Code to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: "@v?${{ steps.version.output.tag }}"
+        find: "@v?${{ steps.version.outputs.tag }}"
         replace: "@staging/${{ steps.short-sha.outputs.sha }}"
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - name: Switch Assets to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: v${{ steps.version.output.tag }}
+        find: v${{ steps.version.outputs.tag }}
         replace: staging/${{ steps.short-sha.outputs.sha }}
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - name: BrowserStack Environment Setup
