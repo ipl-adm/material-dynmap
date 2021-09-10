@@ -6,7 +6,7 @@ const scriptStagingDomain = "https://cdn.jsdelivr.net/gh/SNDST00M/material-dynma
 const userScriptUrl = `${scriptStagingDomain}/src/user.js`;
 const electronScriptUrl = `${scriptStagingDomain}/src/electron.js`;
 
-suite("Userscript Tests", async function() {
+suite("Userscript Tests", function() {
 	this.timeout(20000);
 	test("./src/user.js", scriptTest.bind({
 		loadStrategy: "eager",
@@ -32,8 +32,8 @@ async function scriptTest() {
 	await browser.url(process.env.CI_ADDRESS);
 	await browser.execute(`;(function() {
 		const promise = new Promise();
-		window.document.addEventListener("material-dynmap.load", promise.resolve.bind.promise);
-		setTimeout(promise.reject.bind.promise, 5000);
+		window.document.addEventListener("material-dynmap.load", promise.resolve.bind(promise));
+		setTimeout(promise.reject.bind(promise), 5000);
 		import("${userScriptUrl}");
 		return promise;
 	}())`.replace(/^\t/g, ""));
@@ -45,5 +45,5 @@ async function scriptTest() {
 	const typeContainer = await $(".leaflet-type-container");
 	assert(typeContainer.isExisting(), "Type container does not exist!");
 
-	return;
+	return true;
 }
