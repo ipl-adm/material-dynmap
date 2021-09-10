@@ -7,7 +7,7 @@ const userScriptUrl = `${scriptStagingDomain}/src/user.js`;
 const electronScriptUrl = `${scriptStagingDomain}/src/electron.js`;
 
 suite("Userscript Tests", function() {
-	this.timeout(20000);
+	this.timeout(30000);
 	test("./src/user.js", scriptTest.bind({
 		loadStrategy: "eager",
 		resourceUrl: userScriptUrl
@@ -30,20 +30,24 @@ async function scriptTest() {
 	});
 
 	await browser.url(process.env.CI_ADDRESS);
-	await browser.execute(`;(function() {
-		const promise = new Promise();
-		window.document.addEventListener("material-dynmap.load", promise.resolve.bind(promise));
-		setTimeout(promise.reject.bind(promise), 5000);
-		import("${userScriptUrl}");
+	await browser.execute(async function(url) {
+		const promise = new Promise(function(resolve, reject) {
+			window.document.addEventListener(
+				"material-dynmap.load",
+				resolve.bind(this, true)
+			);
+			setTimeout(reject.bind(this, false), 10000);
+		});
+		await import(`${url}`);
 		return promise;
-	}())`.replace(/^\t/g, ""));
+	}, userScriptUrl);
 
-	const sidebarBackgroundColor = await $(".sidebar").getCSSProperty("background-color");
-	assert.strictEqual(sidebarBackgroundColor, "rgb(33, 33, 33)");
-	const chipContainer = await $(".leaflet-chip-container");
+	const chipContainer = await browser.$(".leaflet-chip-container");
 	assert(chipContainer.isExisting(), "Chip container does not exist!");
-	const typeContainer = await $(".leaflet-type-container");
+	const typeContainer = await browser.$(".leaflet-type-container");
 	assert(typeContainer.isExisting(), "Type container does not exist!");
+
+	browser.closeWindow();
 
 	return true;
 }
