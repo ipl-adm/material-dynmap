@@ -30,7 +30,7 @@ async function scriptTest() {
 	});
 
 	await browser.url(process.env.CI_ADDRESS);
-	await browser.execute(async function(url) {
+	await browser.execute(function(url) {
 		const promise = new Promise(function(resolve, reject) {
 			window.document.addEventListener(
 				"material-dynmap.load",
@@ -38,7 +38,7 @@ async function scriptTest() {
 			);
 			setTimeout(reject.bind(this, false), 10000);
 		});
-		await import(`${url}`);
+		import(`${url}`);
 		return promise;
 	}, userScriptUrl);
 
