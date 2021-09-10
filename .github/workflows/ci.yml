@@ -115,7 +115,7 @@ jobs:
         local-testing: start
         local-identifier: ${{ steps.short-sha.outputs.sha }}
     - name: Run BrowserStack Tests
-      run: npm install && npx mocha --ui tdd test/node.test.js
+      run: npm install && npm run mocha
     - name: BrowserStack Local Stop
       uses: browserstack/github-actions/setup-local@master
       with:
