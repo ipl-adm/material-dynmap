@@ -7,7 +7,13 @@
     "jquery": true,
     "node": true
   },
-	"extends": "eslint:recommended",
+  "plugins": [
+    "wdio"
+  ],
+	"extends": [
+    "eslint:recommended",
+    "plugin:wdio/recommended"
+  ],
   "parserOptions": {
 		"ecmaVersion": 12
 	},
