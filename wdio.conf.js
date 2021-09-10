@@ -1,26 +1,10 @@
-/* eslint-disable indent, no-undef */
+/* eslint-disable max-len */
 module.exports = {
 	afterTest(_1, _2, tests) {
 		if (tests.passed) {
-			browser.executeScript(
-				"browserstack_executor: { " +
-					'"action": "setSessionStatus",' +
-					'"arguments": { ' +
-						'"status": "passed",' +
-						'"reason": "Assertions passed" ' +
-					"} " +
-				"}"
-			);
+			browser.executeScript("browserstack_executor: { \"action\": \"setSessionStatus\",\"arguments\": { \"status\": \"passed\",\"reason\": \"Assertions passed\" } }");
 		} else {
-			browser.executeScript(
-				"browserstack_executor: {" +
-					'"action": "setSessionStatus",' +
-					'"arguments": { ' +
-						'"status": "failed",' +
-						'"reason": "At least 1 assertion failed" ' +
-					"} " +
-				"}"
-			);
+			browser.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\",\"arguments\": { \"status\": \"failed\",\"reason\": \"At least 1 assertion failed\" } }");
 		}
 	},
 	baseUrl: "",
