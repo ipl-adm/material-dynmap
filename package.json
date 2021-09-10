@@ -28,7 +28,8 @@
   "scripts": {
     "prepublishOnly": "npm run test",
     "test": "npx eslint src --ext .js && npx stylelint \"src/*.css\"",
-    "mocha": "mocha --ui tdd test/node.test.js"
+    "mocha": "mocha --ui tdd test/node.test.js",
+    "wdio": "npx wdio run wdio.conf.js"
   },
   "devDependencies": {
     "@types/mocha": "^9.0.0",
