@@ -26,8 +26,8 @@ module.exports = {
 	baseUrl: "",
 	capabilities: [{
 		browserName: "chrome",
-		build: `staging/${proces.env.GITHUB_SHA.substring(0, 7)}`,
-		name: "Userscript Tests"
+		build: `staging/${process.env.GITHUB_SHA.substring(0, 7)}`,
+		name: "Browser Tests"
 	}],
 	coloredLogs: true,
 	connectionRetryCount: 3,
