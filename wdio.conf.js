@@ -14,7 +14,7 @@ exports.config = {
 		return {
 			browserName: b,
 			build: `staging/${process.env.GITHUB_SHA.substring(0, 7)}@chrome`,
-			name: `${b.replace(/^\w/, b.charAt(0))} Tests"`
+			name: `${b.replace(/^\w/, b.charAt(0).toUpperCase())} Tests"`
 		};
 	}),
 	coloredLogs: true,
