@@ -12,3 +12,4 @@ assets/*.png
 assets/*.svg
 node_modules/**
 java/**
+logs/**
