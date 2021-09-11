@@ -23,7 +23,7 @@ suite("Userscript Tests", function() {
  * @param {Mocha.Done} done
  */
 async function scriptTest() {
-	const browser = await remote(config);
+	const browser = await remote({ capabilities: config.capabilities });
 
 	await browser.url(process.env.CI_ADDRESS);
 	await browser.execute(function(url) {

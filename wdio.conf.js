@@ -8,11 +8,18 @@ exports.config = {
 		}
 	},
 	baseUrl: "",
-	capabilities: [{
-		browserName: "chrome",
-		build: `staging/${process.env.GITHUB_SHA.substring(0, 7)}`,
-		name: "Browser Tests"
-	}],
+	capabilities: [
+		{
+			browserName: "chrome",
+			build: `staging/${process.env.GITHUB_SHA.substring(0, 7)}@chrome`,
+			name: "Chrome Tests"
+		},
+		{
+			browserName: "firefox",
+			build: `staging/${process.env.GITHUB_SHA.substring(0, 7)}@firefox`,
+			name: "Firefox Tests"
+		}
+	],
 	coloredLogs: true,
 	connectionRetryCount: 3,
 	connectionRetryTimeout: 90000,
