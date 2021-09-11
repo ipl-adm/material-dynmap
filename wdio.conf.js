@@ -35,7 +35,7 @@ exports.config = {
 		["chromedriver", {
 			args: ["--silent"],
 			outputDir: "logs/drivers",
-			port: 9515
+			port: 4445
 		}]
 	],
 	specs: ["test/**"],

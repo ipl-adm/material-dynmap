@@ -28,10 +28,7 @@
   "scripts": {
     "prepublishOnly": "npm run test",
     "test": "npx eslint src --ext .js && npx stylelint \"src/*.css\"",
-    "wdio": "npm-run-all wdio:chrome wdio:firefox wdio:test",
-    "wdio:chrome": "npx chromedriver --port=4444 --verbose",
-    "wdio:firefox": "./node_modules/geckodriver/geckodriver --port 4444",
-    "wdio:test": "npx wdio run ./wdio.conf.js"
+    "wdio": "npx wdio run ./wdio.conf.js"
   },
   "devDependencies": {
     "@types/mocha": "^9.0.0",
@@ -44,7 +41,6 @@
     "geckodriver": "^2.0.4",
     "mocha": "^9.1.1",
     "multicraft-api-node": "^2.4.0",
-    "npm-run-all": "^4.1.5",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
