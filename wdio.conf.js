@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-module.exports = {
+exports.config = {
 	afterTest(_1, _2, tests) {
 		if (tests.passed) {
 			browser.executeScript("browserstack_executor: { \"action\": \"setSessionStatus\",\"arguments\": { \"status\": \"passed\",\"reason\": \"Assertions passed\" } }");
