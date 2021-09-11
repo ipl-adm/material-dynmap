@@ -26,6 +26,7 @@ exports.config = {
 		ui: "tdd"
 	},
 	screenshotPath: "./errorShots/",
+	services: ["selenium-standalone"],
 	specs: ["test/**"],
 	user: process.env.BROWSERSTACK_USERNAME,
 	waitforTimeout: 30000
