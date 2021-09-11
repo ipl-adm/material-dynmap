@@ -26,7 +26,7 @@ exports.config = {
 		ui: "tdd"
 	},
 	screenshotPath: "./errorShots/",
-	specs: ["tests/**"],
+	specs: ["test/**"],
 	user: process.env.BROWSERSTACK_USERNAME,
 	waitforTimeout: 30000
 };
