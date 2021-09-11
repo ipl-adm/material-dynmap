@@ -25,8 +25,19 @@ exports.config = {
 		timeout: 60000,
 		ui: "tdd"
 	},
-	screenshotPath: "./errorShots/",
-	services: ["selenium-standalone"],
+	outputDir: "logs",
+	screenshotPath: "./screenshots/",
+	services: [
+		["geckodriver", {
+			args: ["--log=info", "--port=4444"],
+			logs: "./logs/drivers"
+		}],
+		["chromedriver", {
+			args: ["--silent"],
+			outputDir: "logs/drivers",
+			port: 9515
+		}]
+	],
 	specs: ["test/**"],
 	user: process.env.BROWSERSTACK_USERNAME,
 	waitforTimeout: 30000
