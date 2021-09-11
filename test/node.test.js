@@ -1,6 +1,6 @@
 /* eslint-env node, mocha */
 const { remote } = require("webdriverio");
-const { config } = require("../wdio.conf");
+const { browsers } = require("../wdio.conf");
 const assert = require("assert");
 
 const scriptStagingDomain = "https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1";
@@ -23,7 +23,11 @@ suite("Userscript Tests", function() {
  * @param {Mocha.Done} done
  */
 async function scriptTest() {
-	const browser = await remote({ capabilities: config.capabilities });
+	const browser = await remote({
+		capabilities: browsers.map(function(b) {
+			return { browserName: b };
+		})
+	});
 
 	await browser.url(process.env.CI_ADDRESS);
 	await browser.execute(function(url) {

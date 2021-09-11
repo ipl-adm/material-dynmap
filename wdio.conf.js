@@ -1,4 +1,6 @@
 /* eslint-disable max-len */
+exports.browsers = ["chrome", "firefox"];
+
 exports.config = {
 	afterTest(_1, _2, tests) {
 		if (tests.passed) {
@@ -8,18 +10,13 @@ exports.config = {
 		}
 	},
 	baseUrl: "",
-	capabilities: [
-		{
-			browserName: "chrome",
+	capabilities: exports.browsers.map(function(b) {
+		return {
+			browserName: b,
 			build: `staging/${process.env.GITHUB_SHA.substring(0, 7)}@chrome`,
-			name: "Chrome Tests"
-		},
-		{
-			browserName: "firefox",
-			build: `staging/${process.env.GITHUB_SHA.substring(0, 7)}@firefox`,
-			name: "Firefox Tests"
-		}
-	],
+			name: `${b.replace(/^\w/, String.prototype.toLocaleUpperCase)} Tests"`;
+		};
+	}),
 	coloredLogs: true,
 	connectionRetryCount: 3,
 	connectionRetryTimeout: 90000,
