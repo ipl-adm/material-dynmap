@@ -11,11 +11,7 @@ exports.config = {
 	},
 	baseUrl: "",
 	capabilities: exports.browsers.map(function(b) {
-		return {
-			browserName: b,
-			build: `staging/${process.env.GITHUB_SHA.substring(0, 7)}@chrome`,
-			name: `${b.replace(/^\w/, b.charAt(0).toUpperCase())} Tests"`
-		};
+		return { browserName: b };
 	}),
 	coloredLogs: true,
 	connectionRetryCount: 3,
