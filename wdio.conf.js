@@ -29,13 +29,12 @@ exports.config = {
 	screenshotPath: "./screenshots/",
 	services: [
 		["geckodriver", {
-			args: ["--log=silent", "--port=4444"],
+			args: ["--log=trace"],
 			logs: "./logs/drivers"
 		}],
 		["chromedriver", {
-			args: ["--silent"],
-			outputDir: "logs/drivers",
-			port: 4445
+			args: ["--verbose"],
+			outputDir: "logs/drivers"
 		}]
 	],
 	specs: ["test/**"],
