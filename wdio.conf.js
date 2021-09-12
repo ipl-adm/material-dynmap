@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-exports.browsers = ["chrome", "firefox"];
+exports.browsers = ["chrome", "edge", "firefox"];
 
 exports.config = {
 	afterTest(_1, _2, tests) {
@@ -20,23 +20,14 @@ exports.config = {
 	framework: "mocha",
 	host: "hub.browserstack.com",
 	key: process.env.BROWSERSTACK_ACCESS_KEY,
-	logLevel: "warn",
+	logLevel: "trace",
 	mochaOpts: {
 		timeout: 60000,
 		ui: "tdd"
 	},
 	outputDir: "logs",
 	screenshotPath: "./screenshots/",
-	services: [
-		["geckodriver", {
-			args: ["--log=trace"],
-			logs: "./logs/drivers"
-		}],
-		["chromedriver", {
-			args: ["--verbose"],
-			outputDir: "logs/drivers"
-		}]
-	],
+	services: ["selenium-standalone"],
 	specs: ["test/**"],
 	user: process.env.BROWSERSTACK_USERNAME,
 	waitforTimeout: 30000
