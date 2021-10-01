@@ -33,7 +33,7 @@ async function scriptTest() {
 		.build();
 
 	await driver.get(process.env.CI_ADDRESS);
-	await driver.executeAsyncScript(function() {
+	await driver.executeAsyncScript(function(userScriptUrl) {
 		const promise = new Promise(function(resolve, reject) {
 			window.document.addEventListener(
 				"material-dynmap.load",
@@ -43,7 +43,7 @@ async function scriptTest() {
 		});
 		import(`${userScriptUrl}`);
 		return promise;
-	});
+	}, userScriptUrl);
 
 	const sidebarColor = await driver.findElement(By.css("#mcmap .sidebar")).getCssValue("background-color");
 	assert.strictEqual(sidebarColor, "rgb(33, 33, 33)", "Sidebar background not applied");
