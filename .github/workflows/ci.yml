@@ -6,7 +6,7 @@ on:
     branches: [ main, release-candidate/* ]
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Install Git
       run: sudo apt-get update && sudo apt-get install git
