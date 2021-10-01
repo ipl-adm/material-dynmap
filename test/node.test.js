@@ -2,7 +2,6 @@
 const webdriver = require("selenium-webdriver");
 const conf = require("../selenium.conf");
 const assert = require("assert");
-const { suiteTeardown } = require("mocha");
 
 const scriptStagingDomain = "https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1";
 const userScriptUrl = `${scriptStagingDomain}/src/user.js`;
@@ -21,9 +20,6 @@ conf.capabilities.forEach(function(cap) {
 			loadStrategy: "none",
 			resourceUrl: electronScriptUrl
 		}));
-		suiteTeardown(async function() {
-			await driver.quit();
-		})
 	});
 });
 
@@ -55,4 +51,6 @@ async function scriptTest() {
 	assert.strictEqual(chipContainer instanceof webdriver.WebElement, true, "Chip component not present");
 	const minimapContainer = await driver.findElement(By.css("#mcmap .leaflet-minimap-container"));
 	assert.strictEqual(minimapContainer instanceof webdriver.WebElement, true, "Minimap component not present");
+
+	await driver.quit();
 }
