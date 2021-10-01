@@ -19,10 +19,10 @@ exports.capabilities = [
 		browser_version: "latest",
 		os: "Windows",
 		name: `${browser}: ${commitMsg}`,
-		build: `staging/${shortSHA}-${c.toLowerCase()}`
+		build: `staging/${shortSHA}-${browser.toLowerCase()}`
 	};
 });
 
-const browserStackAuth = `${process.env.BROWSERSTACK_USERNAME}:${BROWSERSTACK_ACCESS_KEY}`;
+const browserStackAuth = `${process.env.BROWSERSTACK_USERNAME}:${process.env.BROWSERSTACK_ACCESS_KEY}`;
 
 exports.address = `http://${browserStackAuth}@hub-cloud.browserstack.com/wd/hub`;

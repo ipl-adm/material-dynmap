@@ -50,9 +50,9 @@ async function scriptTest() {
 	}, userScriptUrl);
 
 	const sidebarColor = await driver.findElement(By.css("#mcmap .sidebar")).getCssValue("background-color");
-	assert.strictEqual(sidebarColor, "rgb(33, 33, 33)", "Material Dynmap sidebar background not present");
+	assert.strictEqual(sidebarColor, "rgb(33, 33, 33)", "Sidebar background not applied");
 	const chipContainer = await driver.findElement(By.css("#mcmap .leaflet-chip-container"));
-	assert.strictEqual(chipContainer instanceof webdriver.WebElement, true, "Material Dynmap chip component not present");
+	assert.strictEqual(chipContainer instanceof webdriver.WebElement, true, "Chip component not present");
 	const minimapContainer = await driver.findElement(By.css("#mcmap .leaflet-minimap-container"));
-	assert.strictEqual(minimapContainer instanceof webdriver.WebElement, true, "Material Dynmap minimap component not present");
+	assert.strictEqual(minimapContainer instanceof webdriver.WebElement, true, "Minimap component not present");
 }
