@@ -1,36 +1,43 @@
 /* eslint-env node, mocha */
-const { remote } = require("webdriverio");
-const { browsers } = require("../wdio.conf");
+const webdriver = require("selenium-webdriver");
+const conf = require("../selenium.conf");
 const assert = require("assert");
+const { suiteTeardown } = require("mocha");
 
 const scriptStagingDomain = "https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1";
 const userScriptUrl = `${scriptStagingDomain}/src/user.js`;
 const electronScriptUrl = `${scriptStagingDomain}/src/electron.js`;
 
-suite("Userscript Tests", function() {
-	this.timeout(30000);
-	test("./src/user.js", scriptTest.bind({
-		loadStrategy: "eager",
-		resourceUrl: userScriptUrl
-	}));
-	test("./src/electron.js", scriptTest.bind({
-		loadStrategy: "none",
-		resourceUrl: electronScriptUrl
-	}));
+conf.capabilities.forEach(function(cap) {
+	suite(`${cap.browserName} Tests`, function() {
+		this.timeout(30000);
+		test("./src/user.js", scriptTest.bind({
+			capability: cap,
+			loadStrategy: "eager",
+			resourceUrl: userScriptUrl
+		}));
+		test("./src/electron.js", scriptTest.bind({
+			capability: cap,
+			loadStrategy: "none",
+			resourceUrl: electronScriptUrl
+		}));
+		suiteTeardown(async function() {
+			await driver.quit();
+		})
+	});
 });
 
 /**
  * @param {Mocha.Done} done
  */
 async function scriptTest() {
-	const browser = await remote({
-		capabilities: browsers.map(function(b) {
-			return { browserName: b };
-		})
-	});
+	const driver = await new webdriver.Builder()
+		.usingServer(conf.address)
+		.withCapabilities(this.capability)
+		.build();
 
-	await browser.url(process.env.CI_ADDRESS);
-	await browser.execute(function(url) {
+	await driver.get(process.env.CI_ADDRESS);
+	await driver.executeAsyncScript(function(url) {
 		const promise = new Promise(function(resolve, reject) {
 			window.document.addEventListener(
 				"material-dynmap.load",
@@ -42,12 +49,10 @@ async function scriptTest() {
 		return promise;
 	}, userScriptUrl);
 
-	const chipContainer = await browser.$(".leaflet-chip-container");
-	assert(chipContainer.isExisting(), "Chip container does not exist!");
-	const typeContainer = await browser.$(".leaflet-type-container");
-	assert(typeContainer.isExisting(), "Type container does not exist!");
-
-	browser.closeWindow();
-
-	return true;
+	const sidebarColor = await driver.findElement(By.css("#mcmap .sidebar")).getCssValue("background-color");
+	assert.strictEqual(sidebarColor, "rgb(33, 33, 33)", "Material Dynmap sidebar background not present");
+	const chipContainer = await driver.findElement(By.css("#mcmap .leaflet-chip-container"));
+	assert.strictEqual(chipContainer instanceof webdriver.WebElement, true, "Material Dynmap chip component not present");
+	const minimapContainer = await driver.findElement(By.css("#mcmap .leaflet-minimap-container"));
+	assert.strictEqual(minimapContainer instanceof webdriver.WebElement, true, "Material Dynmap minimap component not present");
 }
