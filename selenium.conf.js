@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-const sha = GITHUB_EVENT_NAME === "pull_request"
+const sha = process.env.GITHUB_EVENT_NAME === "pull_request"
 	? process.env.GITHUB_HEAD_REF
 	: process.env.GITHUB_SHA;
 
