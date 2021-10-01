@@ -53,6 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: commit-message
     env:
+      GITHUB_SHORT_SHA: "${ steps.short-sha.outputs.sha }"
       GITHUB_COMMIT_MSG: "${{ needs.commit-message.outputs.subject }}"
       CI_ADDRESS: "${{ secrets.CI_ADDRESS }}"
       BROWSERSTACK_USERNAME: "${{ secrets.BROWSERSTACK_USERNAME }}"

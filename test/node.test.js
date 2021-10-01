@@ -41,7 +41,7 @@ async function scriptTest() {
 			);
 			setTimeout(reject.bind(this, false), 10000);
 		});
-		import(`${userScriptUrl}`);
+		import(userScriptUrl);
 		return promise;
 	}, userScriptUrl);
 

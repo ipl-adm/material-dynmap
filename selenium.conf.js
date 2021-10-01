@@ -1,11 +1,13 @@
 /* eslint-disable max-len */
-const sha = process.env.GITHUB_EVENT_NAME === "pull_request"
-	? process.env.GITHUB_HEAD_REF
-	: process.env.GITHUB_SHA;
+const cp = require("child_process");
 
-const shortSHA = sha.substr(0, 7);
+const shortSHA = process.env.CI
+	? process.env.GITHUB_SHORT_SHA
+	: cp.execSync("git rev-parse --short HEAD").toString().trim();
 
-const commitMsg = process.env.GITHUB_COMMIT_MSG;
+const commitMsg = process.env.CI
+	? process.env.GITHUB_COMMIT_MSG
+	: cp.execSync(`git log --format=%B -n 1 ${shortSHA}`).toString().trim();
 
 exports.capabilities = [
 	"Chrome",
@@ -19,7 +21,7 @@ exports.capabilities = [
 		browser_version: "latest",
 		os: "Windows",
 		name: `${browser}: ${commitMsg}`,
-		build: `staging/${shortSHA}-${browser.toLowerCase()}`
+		build: `staging/${shortSHA}@${browser.toLowerCase()}`
 	};
 });
 
