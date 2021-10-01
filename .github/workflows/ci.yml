@@ -146,9 +146,9 @@ jobs:
       uses: browserstack/github-actions/setup-local@master
       with:
         local-testing: stop
-    - name: Delete Staging Branch
-      uses: dawidd6/action-delete-branch@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branches: staging/${{ steps.short-sha.outputs.sha }}
-      if: always() && steps.branch.outcome == 'success' && ${{ false }}
+    # - name: Delete Staging Branch
+    #   uses: dawidd6/action-delete-branch@v3
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branches: staging/${{ steps.short-sha.outputs.sha }}
+    #   if: always() && steps.branch.outcome == 'success'
