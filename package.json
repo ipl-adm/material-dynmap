@@ -29,7 +29,7 @@
     "prepublishOnly": "npm run lint",
     "lint": "npx eslint src --ext .js && npx stylelint \"src/*.css\"",
     "test": "npm run lint && npm run selenium",
-    "selenium": "npx rimraf logs && node test/node.test.js"
+    "selenium": "npx rimraf logs && mocha test/node.test.js --config .mocharc.json"
   },
   "devDependencies": {
     "@types/mocha": "^9.0.0",
