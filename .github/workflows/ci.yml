@@ -32,7 +32,7 @@ jobs:
       run: |
         npm ci
         npm run lint
-  commit-message:
+  commit:
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -45,16 +45,19 @@ jobs:
         ref: ${{ github.head_ref }}
     - name: Fetch Git Origin
       run: git fetch origin
+    - name: Get Short SHA
+      uses: benjlevesque/short-sha@v1.2
+      id: short-sha
     - name: Get Commit Message
       run: echo "::set-output name=subject::$(git log --format=%B -n 1 ${{ github.head_ref }})"
       id: log
   browserstack-test:
-    if: "!startsWith( needs.commit-message.outputs.subject, 'Bump version to' )"
+    if: "!startsWith( needs.commit.outputs.subject, 'Bump version to' )"
     runs-on: ubuntu-latest
-    needs: commit-message
+    needs: commit
     env:
-      GITHUB_SHORT_SHA: ${{ steps.short-sha.outputs.sha }}
-      GITHUB_COMMIT_MSG: ${{ needs.commit-message.outputs.subject }}
+      GITHUB_SHORT_SHA: ${{ needs.commit.outputs.sha }}
+      GITHUB_COMMIT_MSG: ${{ needs.commit.outputs.subject }}
       CI_ADDRESS: ${{ secrets.CI_ADDRESS }}
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
@@ -87,9 +90,6 @@ jobs:
         path: ~/.npm
         key: npm-${{ hashFiles('package-lock.json') }}
         restore-keys: npm-
-    - name: Get Short SHA
-      uses: benjlevesque/short-sha@v1.2
-      id: short-sha
     - name: Get Tag Version
       uses: WyriHaximus/github-action-get-previous-tag@v1
       id: version
@@ -98,12 +98,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        branch: staging/${{ steps.short-sha.outputs.sha }}
+        branch: staging/${{ needs.commit.outputs.sha }}
       id: branch
     - name: Checkout Staging Branch
       uses: actions/checkout@v2
       with:
-        ref: staging/${{ steps.short-sha.outputs.sha }}
+        ref: staging/${{ needs.commit.outputs.sha }}
     - name: Switch Code Source to Github
       uses: jacobtomlinson/gha-find-replace@master
       with:
@@ -114,13 +114,13 @@ jobs:
       uses: jacobtomlinson/gha-find-replace@master
       with:
         find: "@v?${{ steps.version.outputs.tag }}"
-        replace: "@staging/${{ steps.short-sha.outputs.sha }}"
+        replace: "@staging/${{ needs.commit.outputs.sha }}"
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - name: Switch Assets to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
         find: v?${{ steps.version.outputs.tag }}
-        replace: staging/${{ steps.short-sha.outputs.sha }}
+        replace: staging/${{ needs.commit.outputs.sha }}
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - name: Integrate Git Pull Merge
       run: git pull
@@ -129,7 +129,7 @@ jobs:
         commit_message: Automated grep to staging version
         commit_options: "--no-verify --signoff"
         push_options: "--force"
-        branch: staging/${{ steps.short-sha.outputs.sha }}
+        branch: staging/${{ needs.commit.outputs.sha }}
     - name: BrowserStack Environment Setup
       uses: browserstack/github-actions/setup-env@master
       with:
@@ -139,7 +139,7 @@ jobs:
       uses: browserstack/github-actions/setup-local@master
       with:
         local-testing: start
-        local-identifier: ${{ steps.short-sha.outputs.sha }}
+        local-identifier: ${{ needs.commit.outputs.sha }}
     - name: Run BrowserStack Tests
       run: npm install && npm run selenium
     - name: BrowserStack Local Stop
@@ -150,5 +150,5 @@ jobs:
     #   uses: dawidd6/action-delete-branch@v3
     #   with:
     #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branches: staging/${{ steps.short-sha.outputs.sha }}
+    #     branches: staging/${{ needs.commit.outputs.sha }}
     #   if: always() && steps.branch.outcome == 'success'
