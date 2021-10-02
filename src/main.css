@@ -113,10 +113,10 @@ body {
 .dynmap .leaflet-control-container .leaflet-chip-container {
 	cursor: ew-resize;
 	display: flex;
-	left: 52px;
+	left: 42px;
+	margin-top: 0;
 	overflow-x: scroll;
 	position: absolute;
-	right: 102px;
 	top: 10px;
 	user-select: none;
 }

@@ -112,7 +112,7 @@
 				});
 
 				for (const name in worlds) {
-					if ( Object.prototype.hasOwnProperty.call(worlds, name)) {
+					if (Object.prototype.hasOwnProperty.call(worlds, name)) {
 						const world = worlds[name];
 						const chip = window.L.DomUtil.create("div", "leaflet-chip");
 						chip.textContent = world.title;
