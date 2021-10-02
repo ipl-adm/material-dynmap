@@ -1,7 +1,7 @@
 /* eslint-env node, mocha */
+const assert = require("assert");
 const webdriver = require("selenium-webdriver");
 const conf = require("../selenium.conf");
-const assert = require("assert");
 
 const scriptStagingDomain = "https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1";
 const userScriptUrl = `${scriptStagingDomain}/src/user.js`;
@@ -23,9 +23,6 @@ conf.capabilities.forEach(function(cap) {
 	});
 });
 
-/**
- * @param {Mocha.Done} done
- */
 async function scriptTest() {
 	const driver = await new webdriver.Builder()
 		.usingServer(conf.address)
@@ -33,23 +30,17 @@ async function scriptTest() {
 		.build();
 
 	await driver.get(process.env.CI_ADDRESS);
-	await driver.executeAsyncScript(function(userScriptUrl) {
-		const promise = new Promise(function(resolve, reject) {
-			window.document.addEventListener(
-				"material-dynmap.load",
-				resolve.bind(this, true)
-			);
-			setTimeout(reject.bind(this, false), 10000);
-		});
-		import(userScriptUrl);
-		return promise;
-	}, userScriptUrl);
+	await driver.executeAsyncScript(`
+	const waitMs = document.readyState === "loading" ? 4500 : 1500;
+	const callback = setTimeout.bind(this, arguments[arguments.length - 1], waitMs);
+	import("${userScriptUrl}").then(callback);
+	`);
 
-	const sidebarColor = await driver.findElement(By.css("#mcmap .sidebar")).getCssValue("background-color");
-	assert.strictEqual(sidebarColor, "rgb(33, 33, 33)", "Sidebar background not applied");
-	const chipContainer = await driver.findElement(By.css("#mcmap .leaflet-chip-container"));
+	const sidebarColor = await driver.findElement(webdriver.By.css("#mcmap .sidebar")).getCssValue("background-color");
+	assert.strictEqual(sidebarColor, "rgba(33, 33, 33, 1)", "Sidebar background not applied");
+	const chipContainer = await driver.findElement(webdriver.By.css("#mcmap .leaflet-chip-container"));
 	assert.strictEqual(chipContainer instanceof webdriver.WebElement, true, "Chip component not present");
-	const minimapContainer = await driver.findElement(By.css("#mcmap .leaflet-minimap-container"));
+	const minimapContainer = await driver.findElement(webdriver.By.css("#mcmap .leaflet-minimap-container"));
 	assert.strictEqual(minimapContainer instanceof webdriver.WebElement, true, "Minimap component not present");
 
 	await driver.quit();
