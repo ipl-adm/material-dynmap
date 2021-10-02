@@ -147,6 +147,10 @@ body {
 	margin-right: 8px;
 }
 
+.dynmap .leaflet-control-container .leaflet-minimap-container {
+	margin: 0;
+}
+
 .dynmap .leaflet-control-container .leaflet-minimap-container .world {
 	bottom: 10px;
 	float: left;
