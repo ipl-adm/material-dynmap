@@ -82,9 +82,6 @@
 			},
 
 			onAdd: function() {
-				if (!this.getContainer()) {
-					return;
-				}
 				this._container = window.L.DomUtil.create("div", "leaflet-chip-container");
 
 				this._container.addEventListener("mousedown", function(e) {
@@ -126,6 +123,8 @@
 				}
 
 				this._container.classList.add("leaflet-chip-container");
+
+				return this.getContainer();
 			}
 		});
 
