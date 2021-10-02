@@ -46,7 +46,7 @@ jobs:
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Get Commit Message
-      run: echo "::set-output name=subject::$(git log --format=%B -n 1 HEAD)"
+      run: echo '::set-output name=subject::$(git log --format=%B -n 1 HEAD)'
       id: log
   browserstack-test:
     if: "!startsWith( needs.commit.outputs.subject, 'Bump version to' )"
@@ -78,7 +78,7 @@ jobs:
     - name: Get Short SHA
       uses: benjlevesque/short-sha@v1.2
       id: short-sha
-    - run: echo "${{ steps.short-sha.outputs.sha }}" >> $GITHUB_SHORT_SHA
+    - run: echo '${{ steps.short-sha.outputs.sha }}' >> '${GITHUB_SHORT_SHA}'
     - name: Use Node.js 16.x
       uses: actions/setup-node@v2
       with:
