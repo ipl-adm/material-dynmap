@@ -92,9 +92,16 @@ jobs:
         path: ~/.npm
         key: npm-${{ hashFiles('package-lock.json') }}
         restore-keys: npm-
-    - name: Get Tag Version
+    - name: Get Latest Tag
       uses: WyriHaximus/github-action-get-previous-tag@v1
       id: version
+    - name: Get Tag Version Number
+      uses: mad9000/actions-find-and-replace-string@2
+      with:
+        source: ${{ steps.version.outputs.tag }}
+        find: "v"
+        replace: ""
+      id: version-number
     - name: Create Staging Branch
       uses: peterjgrainger/action-create-branch@v2.0.1
       env:
@@ -115,13 +122,13 @@ jobs:
     - name: Switch Code to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: "@v?${steps.version.outputs.tag#v}"
+        find: "@v?${{ steps.version-number.outputs.main }}"
         replace: "@staging/${{ steps.short-sha.outputs.sha }}"
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - name: Switch Assets to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: "v?${steps.version.outputs.tag#v}"
+        find: "v?${{ steps.version-number.outputs.main }}"
         replace: "staging/${{ steps.short-sha.outputs.sha }}"
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - name: Integrate Git Pull Merge
