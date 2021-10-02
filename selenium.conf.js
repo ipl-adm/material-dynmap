@@ -1,13 +1,13 @@
 /* eslint-disable max-len */
 const cp = require("child_process");
 
-const shortSHA = process.env.CI
+exports.github = {};
+exports.github.sha = process.env.CI
 	? process.env.GITHUB_SHORT_SHA
 	: cp.execSync("git rev-parse --short HEAD").toString().trim();
-
-const commitMsg = process.env.CI
+exports.github.msg = process.env.CI
 	? process.env.GITHUB_COMMIT_MSG
-	: cp.execSync(`git log --format=%B -n 1 ${shortSHA}`).toString().trim();
+	: cp.execSync(`git log --format=%B -n 1 ${exports.github.sha}`).toString().trim()
 
 exports.capabilities = [
 	"Chrome",
@@ -15,13 +15,13 @@ exports.capabilities = [
 	"Firefox"
 ].map(function(browser) {
 	return {
-		os_version: "10",
-		resolution: "1024x768",
 		browserName: browser,
 		browser_version: "latest",
+		build: `staging/${exports.github.sha}@${browser.toLowerCase()}`,
+		name: `${browser}: ${exports.github.msg}`,
 		os: "Windows",
-		name: `${browser}: ${commitMsg}`,
-		build: `staging/${shortSHA}@${browser.toLowerCase()}`
+		os_version: "10",
+		resolution: "1024x768"
 	};
 });
 
