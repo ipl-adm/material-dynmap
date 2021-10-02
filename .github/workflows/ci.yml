@@ -115,13 +115,13 @@ jobs:
     - name: Switch Code to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: "@${steps.version.outputs.tag/v/v?}"
+        find: "v?${steps.version.outputs.tag#v}"
         replace: "@staging/${{ steps.short-sha.outputs.sha }}"
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - name: Switch Assets to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: "${steps.version.outputs.tag/v/v?}"
+        find: "${steps.version.outputs.tag#v}"
         replace: "staging/${{ steps.short-sha.outputs.sha }}"
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - name: Integrate Git Pull Merge
