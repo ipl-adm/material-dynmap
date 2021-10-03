@@ -7,7 +7,7 @@ exports.github.sha = process.env.CI
 	: cp.execSync("git rev-parse --short HEAD").toString().trim();
 exports.github.msg = process.env.CI
 	? process.env.GITHUB_COMMIT_MSG
-	: cp.execSync(`git log --format=%B -n 1 ${exports.github.sha}`).toString().trim()
+	: cp.execSync(`git log --format=%B -n 1 ${exports.github.sha}`).toString().trim();
 
 exports.capabilities = [
 	"Chrome",

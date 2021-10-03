@@ -19,6 +19,7 @@ jobs:
         fetch-depth: 1
         ref: ${{ github.head_ref }}
         token: ${{ secrets.GIT_ACCESS_TOKEN }}
+        clean: false
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Use Node.js 16.x
@@ -48,6 +49,7 @@ jobs:
         fetch-depth: 0
         ref: ${{ github.head_ref }}
         token: ${{ secrets.GIT_ACCESS_TOKEN }}
+        clean: false
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Get Commit Message
@@ -79,6 +81,7 @@ jobs:
         fetch-depth: 0
         ref: ${{ github.head_ref }}
         token: ${{ secrets.GIT_ACCESS_TOKEN }}
+        clean: false
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Get Short SHA
@@ -108,6 +111,7 @@ jobs:
         fetch-depth: 0
         ref: ${{ github.head_ref }}
         token: ${{ secrets.GIT_ACCESS_TOKEN }}
+        clean: false
     - name: Switch Code Source to Github
       uses: jacobtomlinson/gha-find-replace@master
       with:
@@ -123,8 +127,8 @@ jobs:
     - name: Switch Assets to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: "v?${{ needs.build.outputs.tag }}"
-        replace: "staging/${{ steps.short-sha.outputs.sha }}"
+        find: "\\/v?${{ needs.build.outputs.tag }}"
+        replace: "\\/staging/${{ steps.short-sha.outputs.sha }}"
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
