@@ -18,8 +18,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        fetch-depth: 0
-        ref: ${{ steps.branch-name.outputs.current_branch }}
+        fetch-depth: 1
+        ref: ${{ steps.branch-name.outputs.head_ref_branch }}
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Use Node.js 16.x
@@ -47,7 +47,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        ref: ${{ needs.build.outputs.current_branch }}
+        ref: ${{ needs.build.outputs.head_ref_branch }}
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Get Commit Message
@@ -77,7 +77,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        ref: ${{ needs.build.outputs.current_branch }}
+        ref: ${{ needs.build.outputs.head_ref_branch }}
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Get Short SHA
@@ -104,7 +104,8 @@ jobs:
     - name: Checkout Staging Branch
       uses: actions/checkout@v2
       with:
-        ref: staging/${{ steps.short-sha.outputs.sha }}
+        fetch-depth: 0
+        ref: ${{ needs.build.outputs.head_ref_branch }}
     - name: Switch Code Source to Github
       uses: jacobtomlinson/gha-find-replace@master
       with:
