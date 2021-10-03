@@ -117,19 +117,19 @@ jobs:
       with:
         find: /npm/material-dynmap
         replace: /gh/material-dynmap
-        exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
+        exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*|\.git/.*
     - name: Switch Code to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
         find: "@v?${{ needs.build.outputs.tag }}"
         replace: "@staging/${{ steps.short-sha.outputs.sha }}"
-        exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
+        exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*|\.git/.*
     - name: Switch Assets to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
         find: "\\/v?${{ needs.build.outputs.tag }}"
         replace: "\\/staging/${{ steps.short-sha.outputs.sha }}"
-        exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*
+        exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*|\.git/.*
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Automated grep to staging version
