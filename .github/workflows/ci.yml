@@ -6,6 +6,8 @@ on:
     branches: [ main, release-candidate/* ]
 jobs:
   debug:
+    runs-on: ubuntu-latest
+    steps:
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
