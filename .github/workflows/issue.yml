@@ -12,11 +12,11 @@ jobs:
     steps:
       - name: Label open issue
         if: "github.event.action == 'opened'"
-        uses: andymckay/labeler@master
+        uses: upinetree/labeler@fix-pull-request-param
         with:
           add-labels: "status-tracking"
       - name: Label closed issue
         if: "github.event.action == 'closed'"
-        uses: andymckay/labeler@master
+        uses: upinetree/labeler@fix-pull-request-param
         with:
           remove-labels: "status-tracking"

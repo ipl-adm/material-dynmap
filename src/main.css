@@ -113,10 +113,10 @@ body {
 .dynmap .leaflet-control-container .leaflet-chip-container {
 	cursor: ew-resize;
 	display: flex;
-	left: 52px;
+	left: 42px;
+	margin-top: 0;
 	overflow-x: scroll;
 	position: absolute;
-	right: 102px;
 	top: 10px;
 	user-select: none;
 }
@@ -147,7 +147,11 @@ body {
 	margin-right: 8px;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world {
+.dynmap .leaflet-control-container .leaflet-minimap-container {
+	margin: 0;
+}
+
+.dynmap .leaflet-control-container .leaflet-minimap-container .world {
 	bottom: 10px;
 	float: left;
 	font-size: 0;
@@ -158,11 +162,11 @@ body {
 	z-index: 121;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .maplist {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .maplist {
 	padding: 0;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .item {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .item {
 	background-color: #212121cc !important;
 	border-radius: 8px;
 	cursor: pointer;
@@ -171,29 +175,29 @@ body {
 	transition: background-color 0.2s;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .item,
-.dynmap .leaflet-control-container .leaflet-type-container .item.selected,
-.dynmap .leaflet-control-container .leaflet-type-container .item:hover {
+.dynmap .leaflet-control-container .leaflet-minimap-container .item,
+.dynmap .leaflet-control-container .leaflet-minimap-container .item.selected,
+.dynmap .leaflet-control-container .leaflet-minimap-container .item:hover {
 	border: none;
 	margin: 5px 2px;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .item:hover {
+.dynmap .leaflet-control-container .leaflet-minimap-container .item:hover {
 	background-color: #212121 !important;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .item,
-.dynmap .leaflet-control-container .leaflet-type-container .world .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .item,
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .maptype {
 	height: 75px;
 	margin: 0;
 	width: 75px;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .item:nth-child(n+2) {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .item:nth-child(n+2) {
 	margin: 0 0 0 8px;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .item:after {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .item:after {
 	border: 5px solid #212121;
 	border-radius: 6px;
 	bottom: 2px;
@@ -208,11 +212,11 @@ body {
 	z-index: 121;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .item:hover:after {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .item:hover:after {
 	box-shadow: 0 0 0 2px #000000;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .maptype {
 	background-size: cover;
 	display: flex;
 	flex-direction: column-reverse;
@@ -220,7 +224,7 @@ body {
 	text-indent: initial;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .maptype:before {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .maptype:before {
 	color: #ffffff;
 	content: attr(title);
 	display: flex;
@@ -230,44 +234,44 @@ body {
 	z-index: 121;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .item .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .item .maptype {
 	background-image: url("https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1/assets/minimap-flat.svg") !important;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .item[class*="south"]:not(.south) .maptype,
-.dynmap .leaflet-control-container .leaflet-type-container .world .item[class*="Surface"] .maptype,
-.dynmap .leaflet-control-container .leaflet-type-container .world .item[class*="surface"] .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .item[class*="south"]:not(.south) .maptype,
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .item[class*="Surface"] .maptype,
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .item[class*="surface"] .maptype {
 	background-image: url("https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1/assets/minimap-surface.svg") !important;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container .world .topo .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container .world .topo .maptype {
 	background-image: url("https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1/assets/minimap-topology.svg") !important;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container[class*="nether"] .world .item .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container[class*="nether"] .world .item .maptype {
 	background-image: url("https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1/assets/minimap-flat-nether.svg") !important;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container[class*="nether"] .world .nether .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container[class*="nether"] .world .nether .maptype {
 	background-image: url("https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1/assets/minimap-surface-nether.svg") !important;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container[class*="nether"] .world .NetherRoof .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container[class*="nether"] .world .NetherRoof .maptype {
 	background-image: url("https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1/assets/minimap-topology-nether.svg") !important;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container[class*="the_end"] .world .item .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container[class*="the_end"] .world .item .maptype {
 	background-image: url("https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1/assets/minimap-flat-end.svg") !important;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container[class*="the_end"] .world .the_end .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container[class*="the_end"] .world .the_end .maptype {
 	background-image: url("https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1/assets/minimap-surface-end.svg") !important;
 }
 
-.dynmap .leaflet-control-container .leaflet-type-container[class*="the_end"] .world .item[class*="End"][class*="Roof"] .maptype,
-.dynmap .leaflet-control-container .leaflet-type-container[class*="the_end"] .world .item[class*="End"][class*="Topo"] .maptype,
-.dynmap .leaflet-control-container .leaflet-type-container[class*="the_end"] .world .item[class*="the_end"][class*="_roof"] .maptype,
-.dynmap .leaflet-control-container .leaflet-type-container[class*="the_end"] .world .item[class*="the_end"][class*="_topo"] .maptype {
+.dynmap .leaflet-control-container .leaflet-minimap-container[class*="the_end"] .world .item[class*="End"][class*="Roof"] .maptype,
+.dynmap .leaflet-control-container .leaflet-minimap-container[class*="the_end"] .world .item[class*="End"][class*="Topo"] .maptype,
+.dynmap .leaflet-control-container .leaflet-minimap-container[class*="the_end"] .world .item[class*="the_end"][class*="_roof"] .maptype,
+.dynmap .leaflet-control-container .leaflet-minimap-container[class*="the_end"] .world .item[class*="the_end"][class*="_topo"] .maptype {
 	background-image: url("https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@v0.8.1/assets/minimap-topology-end.svg") !important;
 }
 
@@ -729,7 +733,7 @@ body {
 		box-shadow: 0 0 0 16384px #000000bf;
 	}
 
-	.dynmap .leaflet-control-container .leaflet-type-container .world {
+	.dynmap .leaflet-control-container .leaflet-minimap-container .world {
 		left: 18px;
 	}
 }
