@@ -28,6 +28,7 @@ jobs:
       with:
         fetch-depth: 1
         ref: ${{ steps.head-branch.outputs.head_ref }}
+        token: ${{ secrets.GIT_ACCESS_TOKEN }}
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Use Node.js 16.x
@@ -56,6 +57,7 @@ jobs:
       with:
         fetch-depth: 0
         ref: ${{ needs.build.outputs.head_ref }}
+        token: ${{ secrets.GIT_ACCESS_TOKEN }}
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Get Commit Message
@@ -86,6 +88,7 @@ jobs:
       with:
         fetch-depth: 0
         ref: ${{ needs.build.outputs.head_ref }}
+        token: ${{ secrets.GIT_ACCESS_TOKEN }}
     - name: Fetch Git Origin
       run: git fetch origin
     - name: Get Short SHA
@@ -114,6 +117,7 @@ jobs:
       with:
         fetch-depth: 0
         ref: ${{ needs.build.outputs.head_ref }}
+        token: ${{ secrets.GIT_ACCESS_TOKEN }}
     - name: Switch Code Source to Github
       uses: jacobtomlinson/gha-find-replace@master
       with:
