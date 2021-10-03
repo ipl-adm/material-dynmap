@@ -3,7 +3,7 @@ const assert = require("assert");
 const webdriver = require("selenium-webdriver");
 const conf = require("../selenium.conf");
 
-const scriptStagingDomain = `https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@${conf.github.sha}`;
+const scriptStagingDomain = `https://cdn.jsdelivr.net/gh/SNDST00M/material-dynmap@staging/${conf.github.sha}`;
 const userScriptUrl = `${scriptStagingDomain}/src/user.js`;
 const electronScriptUrl = `${scriptStagingDomain}/src/electron.js`;
 
