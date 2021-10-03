@@ -24,7 +24,7 @@ jobs:
         fi
       id: head-branch
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.3.4
       with:
         fetch-depth: 1
         ref: ${{ steps.head-branch.outputs.head_ref }}
@@ -52,7 +52,7 @@ jobs:
     - name: Install Git
       run: sudo apt-get update && sudo apt-get install git ca-certificates
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.3.4
       with:
         fetch-depth: 0
         ref: ${{ needs.build.outputs.head_ref }}
@@ -82,7 +82,7 @@ jobs:
     - name: Install Git
       run: sudo apt-get update && sudo apt-get install git ca-certificates
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.3.4
       with:
         fetch-depth: 0
         ref: ${{ needs.build.outputs.head_ref }}
@@ -110,7 +110,7 @@ jobs:
         branch: staging/${{ steps.short-sha.outputs.sha }}
       id: branch
     - name: Checkout Staging Branch
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.3.4
       with:
         fetch-depth: 0
         ref: ${{ needs.build.outputs.head_ref }}
