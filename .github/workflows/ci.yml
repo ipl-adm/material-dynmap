@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install Git
-      run: sudo apt-get update && sudo apt-get install git
+      run: sudo apt-get update && sudo apt-get install git ca-certificates
     - name: Get branch data
       uses: tj-actions/branch-names@v5
       id: branch-name
@@ -50,7 +50,7 @@ jobs:
     needs: build
     steps:
     - name: Install Git
-      run: sudo apt-get update && sudo apt-get install git
+      run: sudo apt-get update && sudo apt-get install git ca-certificates
     - name: Checkout
       uses: actions/checkout@v2
       with:
@@ -80,7 +80,7 @@ jobs:
         distribution: "temurin"
         java-version: "16"
     - name: Install Git
-      run: sudo apt-get update && sudo apt-get install git
+      run: sudo apt-get update && sudo apt-get install git ca-certificates
     - name: Checkout
       uses: actions/checkout@v2
       with:
