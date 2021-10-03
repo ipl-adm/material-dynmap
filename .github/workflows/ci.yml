@@ -79,11 +79,16 @@ jobs:
         clean: false
     - name: Fetch Git Origin
       run: git fetch origin
-    - name: Get branch data
-      uses: tj-actions/branch-names@v5
-      id: branch-name
+    - name: Get Previous Tag
+      uses: WyriHaximus/github-action-get-previous-tag@v1.1.0
+      id: previous-tag
+    - name: Get Version Number
+      uses: mad9000/actions-find-and-replace-string@2
+      id: version-number
       with:
-        strip_tag_prefix: "v"
+        source: ${{ steps.previous-tag.outputs.tag }}
+        find: "v"
+        replace: ""
     - name: Get Short SHA
       uses: benjlevesque/short-sha@v1.2
       id: short-sha
@@ -121,13 +126,13 @@ jobs:
     - name: Switch Code to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: "@v?${{ steps.branch-name.outputs.tag }}"
+        find: "@v?${{ steps.version-number.outputs.main }}"
         replace: "@staging/${{ steps.short-sha.outputs.sha }}"
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*|\.git/.*
     - name: Switch Assets to Staging Version
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: "v?${{ steps.branch-name.outputs.tag }}"
+        find: "v?${{ steps.version-number.outputs.main }}"
         replace: "staging/${{ steps.short-sha.outputs.sha }}"
         exclude: CHANGELOG.md|.*\.json|.*\.yml|.*\.svg|java/.*|\.git/.*
     - uses: stefanzweifel/git-auto-commit-action@v4
